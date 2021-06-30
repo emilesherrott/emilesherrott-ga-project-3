@@ -4,7 +4,6 @@ import Workspace from '../models/workspace.js'
 import workspaceData from './data/workspaces.js'
 import User from '../models/user.js'
 import userData from './data/users.js'
-import workspace from '../models/workspace.js'
 
 const seedDatabase = async () => {
   try {

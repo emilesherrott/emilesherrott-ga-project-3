@@ -1,5 +1,4 @@
 import mongoose from 'mongoose'
-import workspaces from '../db/data/workspaces'
 
 const commentSchema = new mongoose.Schema({
   text: {type: String, required: true, maxlength: 1000},
