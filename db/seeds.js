@@ -2,6 +2,9 @@ import mongoose from 'mongoose'
 import { dbURI } from '../config/environment.js'
 import Workspace from '../models/workspace.js'
 import workspaceData from './data/workspaces.js'
+import User from '../models/user.js'
+import userData from './data/users.js'
+import workspace from '../models/workspace.js'
 
 const seedDatabase = async () => {
   try {
@@ -12,8 +15,16 @@ const seedDatabase = async () => {
     await mongoose.connection.db.dropDatabase()
     console.log(`DB dropped`)
 
+    //create users
+    const users = await User.create(userData)
+
+    //create workspacedata with added owner field
+    const workspacesWithUsers = workspaceData.map(workspace => {
+      return {...workspace, owner: users[0]._id}
+    })
+
     //create shows
-    const workspaces = await Workspace.create(workspaceData)
+    const workspaces = await Workspace.create(workspacesWithUsers)
     console.log(`DB seeds with ${workspaces.length} workspaces`)
 
     //close connection
