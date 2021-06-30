@@ -2,7 +2,7 @@ import User from '../models/user.js'
 
 import jwt from 'jsonwebtoken'
 
-import { secret } from '../config/environment'
+import { secret } from '../config/environment.js'
 
 //! user registerring
 

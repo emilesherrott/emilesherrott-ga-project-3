@@ -22,7 +22,7 @@ const workspaceSchema = new mongoose.Schema({
   image : { type: String, required: true, unique: true },
   textDescription : { type: String, required: true, unique: true, maxlength: 1000 },
   facilities : { type: Array },
-  owner : {type: mongoose.Schema.ObjectID, ref: 'User', required: true},
+  owner : {type: mongoose.Schema.ObjectId, ref: 'User', required: true},
   comments: [commentSchema]
 })
 

@@ -14,12 +14,13 @@ export const deleteWorkspace = async (req, res) => {
   try { 
     const { id } = req.params //! use params to find workspace id
     const workspaceToDelete = await Workspace.findById(id) //! find workspace
+    console.log(req.currentUser._id)
     console.log('workspaceToDelete', workspaceToDelete) //! log it
+    
     if (!workspaceToDelete) throw new Error() //! if none, throw error
     if (!workspaceToDelete.owner.equals(req.currentUser._id)) throw new Error('Unauthorised') //! if current user id is not matching workspace owner id, throw error
     await workspaceToDelete.remove() 
     return res.status(204).json()
-
   } catch (error) {
     console.log(error)
     return res.status(404).json({ message: error.message })
@@ -45,8 +46,13 @@ export const updateWorkspace = async (req, res) => {
 
 //ADD A NEW WORKSPACE '/workspaces'
 export const addWorkspace = async (req, res) => {
+  console.log('using add route')
   try {
-    const workspaceToAdd = await Workspace.create(req.body)
+    // const workspaceToAdd = await Workspace.create(req.body)
+    const workspaceWithOwner = { ...req.body, owner: req.currentUser._id }
+    // console.log(workspaceToAdd)
+    console.log(workspaceWithOwner)
+    const workspaceToAdd = await Workspace.create(workspaceWithOwner)
     return res.status(201).json(workspaceToAdd)
   } catch (error) {
     console.log(error)
