@@ -20,7 +20,7 @@ const workspaceSchema = new mongoose.Schema({
   lat : { type: String, required: true, unique: true },
   link : { type: String, required: true, unique: true },
   image : { type: String, required: true, unique: true },
-  textDescription : { type: String, required: true, unique: true, maxlength: 400 },
+  textDescription : { type: String, required: true, unique: true, maxlength: 1000 },
   facilities : { type: Array },
   comments: [commentSchema]
 })
