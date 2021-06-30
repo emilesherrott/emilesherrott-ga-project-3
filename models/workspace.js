@@ -1,4 +1,4 @@
-import mongoose from 'mongosse'
+import mongoose from 'mongoose'
 
 //Define the schema for workspace, the schema is a blueprint for how we want each document for be formatted
 const workspaceSchema = new mongoose.Schema({
