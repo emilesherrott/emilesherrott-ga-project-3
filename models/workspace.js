@@ -2,9 +2,8 @@ import mongoose from 'mongoose'
 
 //Define the schema for workspace, the schema is a blueprint for how we want each document for be formatted
 const workspaceSchema = new mongoose.Schema({
-  name : { type: String, required: true },
-  addressLineOne: { type: String, required: true, unique: true },
-  addressLineTwo: { type: String, required: true, unique: true },
+  name: { type: String, required: true },
+  address: { type: String, required: true, unique: true },
   city : { type: String, required: true },
   postcode : { type: String, required: true, unique: true },
   country : { type: String, required: true },
