@@ -8,6 +8,37 @@ export const getAllWorkspaces = async (_req, res) => {
   return res.status(200).json(workspaces)
 }
 
+//! DELETE REQUEST /Workspaces/:id
+export const deleteWorkspace = async (req, res) => {
+  console.log('DELETE PATH')
+  try { 
+    const { id } = req.params //! use params to find workspace id
+    const workspaceToDelete = await Workspace.findById(id) //! find workspace
+    console.log('workspaceToDelete', workspaceToDelete) //! log it
+    if (!workspaceToDelete) throw new Error() //! if none, throw error
+    if (!workspaceToDelete.owner.equals(req.currentUser._id)) throw new Error('Unauthorised') //! if current user id is not matching workspace owner id, throw error
+    await workspaceToDelete.remove() 
+    return res.status(204).json()
+
+  } catch (error) {
+    console.log(error)
+    return res.status(404).json({ message: error.message })
+  }
+}
+
+//! UPDATE WORKSPACE /workspaces/:id
+export const updateWorkspace = async (req, res) => {
+  const { id } = req.params //! use id from params
+  try {
+    const workspaceToUpdate = await Workspace.findOneAndUpdate({  _id: id }, { ...req.body }, { new: true }) //! find one and update with request body, showing updated one with new:true
+    console.log(workspaceToUpdate) //! log workspace
+    if (!workspaceToUpdate) throw new Error() //! if none, error
+    return res.status(200).json(workspaceToUpdate) //! show response status with updated workspace
+  } catch (error) {
+    console.log(error)
+    return res.status(404).json({ message: 'not found' })
+  }
+}
 
 
 
@@ -36,6 +67,8 @@ export const getWorkspace = async (req, res) => {
     return res.status(404).json({ 'message': 'Workspace not found' })
   }
 }
+
+
 
 // CREATE COMMENTS
 export const addComment = async (req, res) => {
