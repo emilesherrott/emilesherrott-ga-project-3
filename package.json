@@ -1,0 +1,17 @@
+{
+  "name": "name-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:TarasKiricenko/name-test.git",
+  "author": "Taras Kiricenko <taras.kiricenko@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.13.0",
+    "yarn": "^1.22.10"
+  },
+  "type": "module",
+  "scripts": {
+    "serve": "npx nodemon index.js"
+  }
+}
