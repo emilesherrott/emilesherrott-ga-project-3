@@ -1,5 +1,13 @@
 import mongoose from 'mongoose'
 
+const commentSchema = new mongoose.Schema({
+  text: {type: String, required: true, maxlength: 1000},
+  rating: {type: Number, required: true, min: 1, max: 5},
+  owner: {type: mongoose.Schema.ObjectId, ref: 'User', required: true}
+}, {
+  timestamps: true // Create timestamps automatically on creation and update
+})
+
 //Define the schema for workspace, the schema is a blueprint for how we want each document for be formatted
 const workspaceSchema = new mongoose.Schema({
   name: { type: String, required: true },
@@ -13,7 +21,8 @@ const workspaceSchema = new mongoose.Schema({
   link : { type: String, required: true, unique: true },
   image : { type: String, required: true, unique: true },
   textDescription : { type: String, required: true, unique: true, maxlength: 400 },
-  facilities : { type: Array }
+  facilities : { type: Array },
+  comments: [commentSchema]
 })
 
 export default mongoose.model('Workspace', workspaceSchema)
