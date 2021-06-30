@@ -6,7 +6,7 @@ const router = express.Router()
 
 router.route('/workspaces').get(getAllWorkspaces)
 
-router.route('/workspace/:id').get(getWorkspace)
+router.route('/workspaces/:id').get(getWorkspace)
 
 router.route('/workspaces').post(addWorkspace)
 
