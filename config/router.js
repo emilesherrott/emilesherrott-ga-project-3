@@ -1,5 +1,5 @@
 import express from 'express'
-import { getAllWorkspaces , addWorkspace, getWorkspace, updateWorkspace, deleteWorkspace } from '../controllers/workspaces.js'
+import { getAllWorkspaces , addWorkspace, getWorkspace, updateWorkspace, deleteWorkspace, addComment, deleteComment } from '../controllers/workspaces.js'
 import { registerUser, loginUser } from '../controllers/auth.js'
 import { secureRoute } from './secureRoute.js'
 import { getUserProfile } from '../controllers/users.js'
@@ -21,6 +21,12 @@ router.route('/register')
 
 router.route('/login')
   .post(loginUser)
+
+router.route('/workspaces/:id/comments')
+  .post(secureRoute, addComment)
+
+router.route('/workspaces/:id/comments/commentId')
+  .delete(secureRoute, deleteComment)
 
 router.route('/profile')
   .get(secureRoute, getUserProfile) 
