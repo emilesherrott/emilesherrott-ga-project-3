@@ -20,16 +20,15 @@ const startServer = async () => { //! 5.0 get server running
       next()
     })
 
-      //!dont forget json to js
-      app.use(express.json())
+    //!dont forget json to js
+    app.use(express.json())
 
-      // middleware for the router
-      app.use(router)
+    // middleware for the router
+    // app.use('/api', router)
 
-      // next()
-    // })
-
-    // app.use(express.json()) //! 8.0 attaching body 
+    
+    app.use('/api', router)
+    app.use(express.json()) //! 8.0 attaching body 
 
     // app.use(router) //! 10.0
 
@@ -39,12 +38,5 @@ const startServer = async () => { //! 5.0 get server running
     console.log('something has gone wrong')
   }
 }
-
-
-
-
-
-
-
 
 startServer()
