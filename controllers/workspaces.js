@@ -102,13 +102,13 @@ export const deleteComment = async (req, res) => {
     const { id, commentId } = req.params
     const workspace = await Workspace.findById(id)
     if (!workspace) throw new Error('Workspace not found')
-    const commentToDelete = workspace.comment.id(commentId)
+    const commentToDelete = workspace.comments.id(commentId)
     if (!commentToDelete) throw new Error('Comment not found')
     await commentToDelete.remove() 
     await workspace.save()
     return res.sendStatus(204)
-  } catch (err) {
-    console.log(err)
-    return res.status(404).json({ message: err.message })
+  } catch (error) {
+    console.log(error)
+    return res.status(404).json({ message: error.message })
   }
 }
