@@ -22,10 +22,10 @@ router.route('/register')
 router.route('/login')
   .post(loginUser)
 
-router.route('/workplaces/:id/comments')
+router.route('/workspaces/:id/comments')
   .post(secureRoute, addComment)
 
-router.route('/workplaces/:id/comments/commentId')
+router.route('/workspaces/:id/comments/commentId')
   .delete(secureRoute, deleteComment)
 
 router.route('/profile')
