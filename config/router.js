@@ -25,7 +25,7 @@ router.route('/login')
 router.route('/workspaces/:id/comments')
   .post(secureRoute, addComment)
 
-router.route('/workspaces/:id/comments/commentId')
+router.route('/workspaces/:id/comments/:commentId')
   .delete(secureRoute, deleteComment)
 
 router.route('/profile')
