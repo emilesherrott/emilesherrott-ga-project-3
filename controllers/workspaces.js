@@ -11,7 +11,7 @@ import Workspace from '../models/workspace.js'
 export const getWorkspace = async (req, res) => {
   try {
     const { id } = req.params
-    const oneWorkspace = await Workspace.findById(id)
+    const oneWorkspace = await Workspace.findById(id).populate('owner').populate('comments.owner')
     if (!oneWorkspace) throw new Error()
     return res.status(200).json(oneWorkspace)
   } catch (error) {
