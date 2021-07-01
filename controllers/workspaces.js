@@ -107,8 +107,8 @@ export const deleteComment = async (req, res) => {
     await commentToDelete.remove() 
     await workspace.save()
     return res.sendStatus(204)
-  } catch (err) {
-    console.log(err)
-    return res.status(404).json({ message: err.message })
+  } catch (error) {
+    console.log(error)
+    return res.status(404).json({ message: error.message })
   }
 }
