@@ -9,14 +9,12 @@ const router = express.Router()
 
 router.route('/workspaces')
   .get(getAllWorkspaces)
+  .post(secureRoute, addWorkspace)
 
 router.route('/workspaces/:id')
   .get(getWorkspace)
   .put(secureRoute, updateWorkspace)
   .delete(secureRoute, deleteWorkspace)
-
-router.route('/workspaces')
-  .post(secureRoute, addWorkspace)
 
 router.route('/register')
   .post(registerUser)
