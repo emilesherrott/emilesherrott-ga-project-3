@@ -17,6 +17,8 @@ const startServer = async () => { //! 5.0 get server running
 
     app.use((req, _res, next) => { //! 7.0 logger of request method and url of direction it goes to
       console.log(` ICOMING REQUEST: METHOD: ${req.method}, URL IS: ${req.url}`)
+      next()
+    })
 
       //!dont forget json to js
       app.use(express.json())
@@ -24,10 +26,10 @@ const startServer = async () => { //! 5.0 get server running
       // middleware for the router
       app.use(router)
 
-      next()
-    })
+      // next()
+    // })
 
-    app.use(express.json()) //! 8.0 attaching body 
+    // app.use(express.json()) //! 8.0 attaching body 
 
     // app.use(router) //! 10.0
 
