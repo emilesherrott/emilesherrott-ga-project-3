@@ -82,7 +82,7 @@ export const addComment = async (req, res) => {
     const { id } = req.params //CATCH ID FROM PARAMS
     const workspace = await Workspace.findById(id) 
     if (!workspace) throw new Error('No workspace found')
-    const commentToAdd = { ...res.body, owner: req.currentUser._id }
+    const commentToAdd = { ...req.body, owner: req.currentUser._id }
     console.log('commentToAdd ->', commentToAdd)
     console.log('actuals comment for now ->', workspace.comments)
     workspace.comments.push(commentToAdd)
