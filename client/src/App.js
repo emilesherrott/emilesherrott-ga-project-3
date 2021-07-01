@@ -1,16 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 
-function App() {
-  React.useEffect(() => {
+const App = () => {
+  const [workspaces, setWorkspaces] = useState([])
+
+  useEffect(() => {
     const getData = async () => {
-      const res = await fetch('/api/workspace') // * <-- replace with your endpoint
-      const data = await res.json()
-      console.log(data)
+      const { data } = await axios.get('/api/workspaces')
+      setWorkspaces(data)
     }
     getData()
-  })
-
-  return <h1>Hello World</h1>
+  }, [])
+  return (
+    <>
+      {workspaces.map(iter => <h1 key={iter._id}>{iter.name}</h1>)}
+    </>
+  )
 }
 
 export default App
+
