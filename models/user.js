@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema({
   password: {type: String, required: true}
 })
 
-userSchema.virtual('createWorkspaces', {
+userSchema.virtual('createdWorkspaces', {
   ref: 'Workspace',
   localField: '_id',
   foreignField: 'owner'
