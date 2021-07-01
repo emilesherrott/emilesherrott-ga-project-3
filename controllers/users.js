@@ -6,7 +6,7 @@ import User from '../models/user.js'
 
 export const getUserProfile = async (req, res) => {
   try {
-    const user = await User.findById(req.currentUser._id) //* find a user by in from request.
+    // const user = await User.findById(req.currentUser._id) //* find a user by in from request.
     //! make sure the route is set up 35.1
     //! 38.0 POPULATE USER JSON OBJECT WITH CHARACTERS THAT USER CREATED
     // const user = await User.findById(req.currentUser._id).populate('createdWorkspaces') //!!!! BIGFATMARK

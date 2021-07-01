@@ -22,11 +22,11 @@ const startServer = async () => { //! 5.0 get server running
       app.use(express.json())
 
       // middleware for the router
-      app.use(router)
+      // app.use('/api', router)
 
       next()
     })
-
+    app.use('/api', router)
     app.use(express.json()) //! 8.0 attaching body 
 
     // app.use(router) //! 10.0
