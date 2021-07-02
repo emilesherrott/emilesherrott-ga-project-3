@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-<<<<<<< HEAD
 const Nav = () => {
 
   return (
@@ -28,13 +27,6 @@ const Nav = () => {
         </div>
       </div>
     </nav>
-=======
-import React from 'react'
-
-const Nav = () => {
-  return (
-    <h1>Hello</h1>
->>>>>>> e5242ff385268e6923d220f9de5a5f4769f4e628
   )
 }
 

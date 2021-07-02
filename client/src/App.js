@@ -15,7 +15,7 @@ import Maptwo from './components/common/Maptwo.js'
 const App = () => {
   return (
     <Router>
-      {/* <Nav /> */}
+      <Nav />
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path="/ideas" component={Ideas} />
