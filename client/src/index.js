@@ -5,5 +5,9 @@ import 'bootstrap'
 import 'react-bootstrap'
 import './styles/main.scss'
 import App from './App'
+import 'bootstrap'
+import 'react-bootstrap'
+
+
 
 ReactDOM.render(<App />, document.getElementById('root'))
