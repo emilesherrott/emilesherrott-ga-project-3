@@ -3,14 +3,6 @@
 //BOX MAPS
 //BOX FOR SOMTHING....
 
-<<<<<<< HEAD
-
-import React from 'react'
-
-const Home = () => {
-  return (
-    <h1>Hello</h1>
-=======
 import React from 'react'
 import office1 from '../../assets/home_assets/office1.jpg'
 import office2 from '../../assets/home_assets/office2.jpg'
@@ -175,7 +167,6 @@ const Home = () => {
         </div>
       </div>
     </>
->>>>>>> e5242ff385268e6923d220f9de5a5f4769f4e628
   )
 }
 
