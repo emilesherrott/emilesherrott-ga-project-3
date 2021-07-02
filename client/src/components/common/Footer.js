@@ -5,6 +5,16 @@
 //LOGO IMAGE
 
 import React from 'react'
+<<<<<<< HEAD
+
+const Footer = () => {
+  return (
+    <h1>Hello</h1>
+  )
+}
+
+export default Footer
+=======
 import facebook from '../../assets/footer/facebook.png'
 import instagram from '../../assets/footer/instagram.png'
 import tweeter from '../../assets/footer/tweeter.png'
@@ -161,3 +171,4 @@ export default Footer
 
 
 
+>>>>>>> e5242ff385268e6923d220f9de5a5f4769f4e628
