@@ -3,17 +3,6 @@
 //PRIVACY.....SITEMAP 
 //COPYRIGHT INFO
 //LOGO IMAGE
-<<<<<<< HEAD
-import React from 'react'
-
-const Footer = () => {
-  return (
-    <h1>Footer</h1>
-  )
-}
-
-export default Footer
-=======
 
 import React from 'react'
 import facebook from '../../assets/footer/facebook.png'
@@ -172,4 +161,3 @@ export default Footer
 
 
 
->>>>>>> bd4fc91cd97a6c43232632822398c34905fb313c

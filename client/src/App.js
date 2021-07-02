@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-// import Home from './components/common/Home'
+import Home from './components/common/Home'
 // import Nav from './components/common/Nav'
 import Footer from './components/common/Footer'
 import Map from './components/common/Map'
@@ -11,11 +11,12 @@ import Maptwo from './components/common/Maptwo'
 const App = () => {
   return (
     <Router>
-      {/* <Nav />
+      {/* <Nav /> */}
       <Switch>
         <Route exact path='/' component={Home} />
-      </Switch> */}
+      </Switch>
 
+      
       <Switch>
         <Route excact path='/map' component={Map}/>
       </Switch>
