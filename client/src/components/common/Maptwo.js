@@ -5,7 +5,8 @@ import ReactMapGL, { Marker } from 'react-map-gl'
 const Maptwo = () => {
 
   const [myData, setMyData] = useState([])
-
+  const [popup, setPopup] = useState(null)
+  console.log(popup)
   useEffect(() => {
     const getData = async () => {
       const { data } = await axios.get('/api/workspaces')
@@ -16,7 +17,7 @@ const Maptwo = () => {
   console.log(myData)
 
   const [viewport, setViewport] = useState({
-    latitude: 51.515,
+    latitude: 52.515,
     longitude: -0.078,
     zoom: 4,
   })
@@ -36,7 +37,10 @@ const Maptwo = () => {
           onViewportChange={(viewport) => setViewport(viewport)}
         >
           {myData.map(iter => {
-            return (<Marker key={iter._id} latitude={-iter.lat} longitude={-iter.long}>
+            return (<Marker key={iter._id} latitude={parseFloat(iter.lat)} longitude={parseFloat(iter.long)}>
+              <span onClick={() => setPopup(location)}>
+                {'😜'}
+              </span>
                 
                 
             </Marker>)
@@ -45,7 +49,7 @@ const Maptwo = () => {
         
           </Marker> */}
         </ReactMapGL>
-        {myData.map(iter => <h1 key={iter._id}>{iter.long}& {iter.lat}</h1>)}
+        {myData.map(iter => <h1 key={iter._id}>{(parseFloat(iter.long))}& {iter.lat}</h1>)}
       </div>
     </>
   )
