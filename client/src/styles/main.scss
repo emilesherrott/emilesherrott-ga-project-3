@@ -1,6 +1,37 @@
+* {
+  font-family: 'Noto Sans', sans-serif;
+}
+#containercarousel {
+  background-color: #ff385c;
+  color: white;
+  height: 100%;
+}
+.align-items-center h1 { 
+  color: white;
+  font-size: bold;
+  font-size: 38px;
+}
+#containercarouselright {
+  display: table-row-group;
+}
+#corousetext  {
+  background-color: rgba(238, 236, 227, 0.692);
+}
+  // #0071c2
+#corousetext h5 {
+  color: #FF385C;
+  font-size: bold;
+  font-size: 32px;
+}
+#corousetext p {
+  color: #FF385C;
+  font-size: bold;
+  font-style: oblique;
+  font-size: 21px;
+}
+
 .taras1 {
   padding-bottom: 20px;
-  
 }
 
 .box-shadow {

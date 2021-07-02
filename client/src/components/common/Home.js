@@ -11,6 +11,9 @@ import deskspace from '../../assets/home_assets/deskspace.png'
 import officespace from '../../assets/home_assets/officespace.png'
 import openworkspace from '../../assets/home_assets/openworkspace.png'
 import eventspace from '../../assets/home_assets/eventspace.png'
+import image1 from '../../assets/home_stories/story2.jpg'
+import image2 from '../../assets/home_stories/story3.jpg'
+import image3 from '../../assets/home_stories/story4.jpg'
 
 const Home = () => {
 
@@ -112,6 +115,57 @@ const Home = () => {
         </div>
       </div>
       {/* _________________________________ */}
+      <div className="width: 100%">
+        <div className="row align-items-center" id="containercarousel">
+          <div className="col">
+            <div className="container-fluid">
+              <h1 className="align-items-center text-center blockquote mb-0">Find your space with Workspace!</h1>
+            </div>
+          </div>
+          <div className="col-6">
+            <div className="container" id="containercarouselright">
+              <div id="carouselExampleDark" className="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div className="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div className="carousel-inner">
+                  <div className="carousel-item active" data-bs-interval="10000">
+                    <img src= {image1} className=" d-block w-100" alt="stories"/>
+                    <div className="carousel-caption d-none d-md-block" id="corousetext">
+                      <h5>Victoria</h5>
+                      <p>Workspace - Flexible like working from home but better!</p>
+                    </div>
+                  </div>
+                  <div className="carousel-item" data-bs-interval="2000">
+                    <img src= {image2} className=" d-block w-100" alt="stories"/>
+                    <div className="carousel-caption d-none d-md-block" id="corousetext">
+                      <h5>Valerie</h5>
+                      <p>Workspace - To work with my collegues with all flexibility!</p>
+                    </div>
+                  </div>
+                  <div className="carousel-item">
+                    <img src= {image3} className=" d-block w-100" alt="stories"/>
+                    <div className="carousel-caption d-none d-md-block" id="corousetext">
+                      <h5>Barry</h5>
+                      <p>Workspace - To stay with my best friend!</p>
+                    </div>
+                  </div>
+                </div>
+                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                  <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span className="visually-hidden">Previous</span>
+                </button>
+                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                  <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span className="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
