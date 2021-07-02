@@ -16,5 +16,8 @@
   "scripts": {
     "serve": "npx nodemon index.js",
     "seed": "node db/seeds.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
   }
 }
