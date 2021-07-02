@@ -49,7 +49,7 @@ const Maptwo = () => {
         
           </Marker> */}
         </ReactMapGL>
-        {myData.map(iter => <h1 key={iter._id}>{(parseFloat(iter.long))}& {iter.lat}</h1>)}
+        {/* {myData.map(iter => <h1 key={iter._id}>{(parseFloat(iter.long))}& {iter.lat}</h1>)} */}
       </div>
     </>
   )
