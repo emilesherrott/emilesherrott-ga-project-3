@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <>
       {/* _________________________________ */}
-      <div className="row taras1">
+      <div className="row taras2">
         <div className="col align-self-center">
           <div className="container">
             <div className="card border rounded">
@@ -34,7 +34,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="col-8 align-self-center" >
+        <div className="col-8 align-self-center taras-hidden" >
           <div className="container">
             <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
               <div className="carousel-inner">
@@ -103,7 +103,7 @@ const Home = () => {
           <div className="col taras1">
             <div className="container">
               <div className="card border rounded">
-                <a href="#" type="button" className="btn btn-outline-secondary box-shadow">
+                <a href="/events" type="button" className="btn btn-outline-secondary box-shadow">
                   <div className="card-body">
                     <h3 className="card-title text-center">Looking for an event space?</h3>
                     <img src={eventspace} className="d-block w-100" alt="eventspace" />

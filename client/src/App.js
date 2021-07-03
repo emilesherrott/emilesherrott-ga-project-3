@@ -9,7 +9,7 @@ import Ideas from './components/Ideas.js'
 
 import Map from './components/common/Map.js'
 import Maptwo from './components/common/Maptwo.js'
-
+import Events from './components/common/EventSection/Events.js'
 
 
 const App = () => {
@@ -19,8 +19,9 @@ const App = () => {
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path="/ideas" component={Ideas} />
+        <Route exact path='/events' component={Events} />
       </Switch>
-
+      
       
       <Switch>
         <Route excact path='/map' component={Map}/>
