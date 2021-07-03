@@ -37,7 +37,7 @@ export default [
     long: '-0.058610',
     lat: '51.506699',
     link: 'https://www.thedocklondon.com%2fspaces%2f&c=6243_1&t=0',
-    image: 'https://hubblehq.com/office-space/1313/the-dock',
+    image: 'https://hubble.imgix.net/listings/uploads/spaces/1313/1499941420913-thedock-semiprivate-offices-6.jpg?auto=format%2Ccompress&w=768&q=30&dpr=2',
     textDescription: 'The Dock is located in a beautiful grade I listed building, right next to one of London’s biggest events facilities – the Tobacco Dock. Tenants are the first to hear about the latest gigs, productions and launch parties at Tobacco Dock – does it get much cooler than that? The building benefits from meeting rooms, 24/7 access and a cafe/bar onsite.',
     facilities: ''
   },
