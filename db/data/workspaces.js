@@ -68,5 +68,47 @@ export default [
     image: 'https://wrkland.com/wp-content/uploads/Panorama21-800x500.jpg',
     textDescription: 'Workland Gedimino is situated on the prestigious Gediminas Avenue in Vilnius. The Parliament Building, the Cathedral Square, and plenty of high-quality restaurants, concert halls, boutiques, gyms and cafés are within a short walking distance from our offices. Gediminas Avenue is a place where you really feel you belong to the Vilnius community – more connections, more experience, more opportunities!',
     facilities: ''
+  },
+  {
+    name: 'Workland - Didžioji',
+    address: 'Didžioji 18',
+    city: 'Vilnius',
+    postcode: 'LT-01128',
+    country: 'Lithuania',
+    phoneNumber: +37052228888,
+    long: '25.288103',
+    lat: '54.679264',
+    link: 'https://wrkland.com/locations/private-offices-coworking-spaces-vilnius-didzioji/',
+    image: 'https://wrkland.com/wp-content/uploads/Workland-Didzioji-18-_-originalus-dydis-62-800x500.jpg',
+    textDescription: 'Workland Didžioji business center is located on Didžioji Street, right next to the City Hall in the heart of Vilnius Old Town It benefits from being surrounded by various hotels, restaurants, shops, as well as cultural objects and landmarks. Workland Didžioji provides highly flexible solutions from private offices to workstations in the architecturally unique coworking space. In addition to workspaces, there are 2 meeting rooms and spacious common areas that are suitable for both – formal and informal meetings and boost the networking and cooperation between the members.',
+    facilities: ''
+  },
+  {
+    name: 'Rockit Vilnius',
+    address: 'Gyneju 18',
+    city: 'Vilnius',
+    postcode: 'LT-01109',
+    country: 'Lithuania',
+    phoneNumber: +37069466624,
+    long: '25.264649',
+    lat: '54.692804',
+    link: 'https://www.rockitvilnius.com/',
+    image: 'https://www.govilnius.lt/images/5f478984c905de2bf5310a6a?w=750&h=500&fit=contain',
+    textDescription: 'ROCKIT is the premier space in Lithuania for top FinTech innovators, creators and founders. Rockit offers a full infrastructure for your base—from a flexible desk to a private office, with meeting rooms, ultra-fast wifi and a great communal space. You will quickly find yourself part of the city’s FinTech community, surrounded by innovators like you. What’s more, you’ll have easy access to mentors, industry events and lots of expertise.',
+    facilities: ''
+  },
+  {
+    name: 'GO9 Vilnius',
+    address: 'Gedimino Avenue 9',
+    city: 'Vilnius',
+    postcode: 'LT-01105',
+    country: 'Lithuania',
+    phoneNumber: +37069503036,
+    long: '25.281743',
+    lat: '54.687230',
+    link: 'https://umaworkspace.com/workspaces/lithuania/vilnius/go9/',
+    image: 'https://www.govilnius.lt/images/5e2c2d3f984d890901080039?w=750&h=500&fit=contain',
+    textDescription: 'UMA GO9 – Inspiring coworking space in the centre of Vilnius is located on the top floor of a premium shopping centre called G9. This modern workspace has 36 private offices, 70 open area workstations and six meeting rooms. Membership includes all of the necessary services, ranging from state-of-the-art digital amenities and modern conference rooms to specialty coffee and networking events. Clients can choose between a monthly membership and a one-day pass, and team memberships are also available. No deposits are required, and the term of notice is just one month.',
+    facilities: ''
   }
 ]
