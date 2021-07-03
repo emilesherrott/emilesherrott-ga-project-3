@@ -54,5 +54,19 @@ export default [
     image: 'https://hubble.imgix.net/listings/uploads/spaces/2601/2016-06-06_16%2B22%2B16%2B539429_BG_Hubble_030616_00220-HDR.jpg?auto=format%2Ccompress&w=1200&q=30&dpr=2',
     textDescription: 'Located in the heart of Camden, one of London’s most iconic postcodes, this coworking space is the perfect environment for creative freelancers, startups and bigger businesses. Work.Life offers all-inclusive memberships, including access to free meeting rooms, private phone booths, printing, and free artisan coffee all day every day.',
     facilities: ''
+  },
+  {
+    name: 'Workland - Gedimino',
+    address: 'Gedimino Avenue 20',
+    city: 'Vilnius',
+    postcode: 'LT-01103',
+    country: 'Lithuania',
+    phoneNumber: +37052073111,
+    long: '25.278513',
+    lat: '54.687151',
+    link: 'https://wrkland.com/locations/private-offices-vilnius-gedimino/',
+    image: 'https://wrkland.com/wp-content/uploads/Panorama21-800x500.jpg',
+    textDescription: 'Workland Gedimino is situated on the prestigious Gediminas Avenue in Vilnius. The Parliament Building, the Cathedral Square, and plenty of high-quality restaurants, concert halls, boutiques, gyms and cafés are within a short walking distance from our offices. Gediminas Avenue is a place where you really feel you belong to the Vilnius community – more connections, more experience, more opportunities!',
+    facilities: ''
   }
 ]
