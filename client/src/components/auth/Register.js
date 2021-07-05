@@ -11,6 +11,12 @@ const Register = () => {
     password: '',
     passwordConfirmation: '',
   })
+  const [errors, setErrors] = useState({
+    username: '',
+    email: '',
+    password: '',
+    passwordConfirmation: '',
+  })
 
   const handleChange = (event) => {
     const newFormData = { ...formdata, [event.target.name]: event.target.value }
@@ -22,10 +28,14 @@ const Register = () => {
     try {
       await axios.post('/api/register', formdata)
       history.push('/login')
-    } catch (err) {
-      console.log(err)
+    } catch (error) {
+      console.log(error.response.data)
+      console.log(error.response)
+      // console.log(error.response.data.errors)
+      setErrors(error.response.data.errors)
     }
   }
+  console.log(errors)
   
   return (
     <div className="row justify-content-center">
@@ -41,7 +51,6 @@ const Register = () => {
               id="exampleDropdownFormEmail1.2"
               placeholder="Username" 
               value={formdata.username}/>
-            
             <label htmlFor="exampleDropdownFormEmail1" className="form-label">Email address</label>
             <input 
               onChange={handleChange} 
@@ -50,8 +59,7 @@ const Register = () => {
               className="form-control" 
               id="exampleDropdownFormEmail1" 
               placeholder="email@example.com" 
-              value={formdata.email}
-            />
+              value={formdata.email}/>
           </div>
           <div className="mb-3">
             <label htmlFor="exampleDropdownFormPassword1" className="form-label">Password</label>
