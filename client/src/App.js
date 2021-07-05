@@ -10,6 +10,8 @@ import Ideas from './components/Ideas.js'
 import Map from './components/common/Map.js'
 import Maptwo from './components/common/Maptwo.js'
 import Events from './components/common/EventSection/Events.js'
+import Login from './components/auth/Login.js'
+import Register from './components/auth/Register'
 
 
 const App = () => {
@@ -20,8 +22,9 @@ const App = () => {
         <Route exact path='/' component={Home} />
         <Route path="/ideas" component={Ideas} />
         <Route exact path='/events' component={Events} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
       </Switch>
-      
       
       <Switch>
         <Route excact path='/map' component={Map}/>
