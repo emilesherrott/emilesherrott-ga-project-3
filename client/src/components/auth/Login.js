@@ -8,6 +8,7 @@ const Login = () => {
     email: '',
     password: '',
   })
+  
 
   const handleChange = (event) => {
     const newFormdata = { ...formdata, [event.target.name]: event.target.value }
@@ -22,7 +23,7 @@ const Login = () => {
     try {
       const { data } = await axios.post('api/login', formdata)
       setTokenToLocalStorage(data.token)
-      history.push('/common')
+      history.push('/')
       // console.log('token', data.token)
       // console.log('response', response)
     } catch (err) {
