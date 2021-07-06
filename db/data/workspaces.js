@@ -110,5 +110,19 @@ export default [
     image: 'https://www.govilnius.lt/images/5e2c2d3f984d890901080039?w=750&h=500&fit=contain',
     textDescription: 'UMA GO9 – Inspiring coworking space in the centre of Vilnius is located on the top floor of a premium shopping centre called G9. This modern workspace has 36 private offices, 70 open area workstations and six meeting rooms. Membership includes all of the necessary services, ranging from state-of-the-art digital amenities and modern conference rooms to specialty coffee and networking events. Clients can choose between a monthly membership and a one-day pass, and team memberships are also available. No deposits are required, and the term of notice is just one month.',
     facilities: ''
+  },
+  {
+    name: 'Kaunas Bar',
+    address: 'Gedimino Avenue 9',
+    city: 'Kaunas',
+    postcode: 'LT-01106',
+    country: 'Lithuania',
+    phoneNumber: +37069503036,
+    long: '25.285743',
+    lat: '54.687130',
+    link: 'https://umaworkspace.com/rkspaces/lithuania/vilnius/go9/',
+    image: 'https://www.govilnius.lt/images/5e2c2d3f984d890901080039?w=750&h00&fit=contain',
+    textDescription: 'UMA GO9 – Inspiring coworking space in the centre of Vilnius is located on the top floor of a premium shopping centre called G9. This modern workspace has 36 private offices, 70 open area workstations and six meetetween a monthly membership and a one-day pass, and team memberships are also available. No deposits are required, and the term of notice is just one month.',
+    facilities: ''
   }
 ]
