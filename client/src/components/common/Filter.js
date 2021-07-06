@@ -3,7 +3,7 @@ import axios from 'axios'
 
 
 const Filter = () => {
-
+ 
   const [filtered,setfiltered] = useState([])
   const [workspaces, setWorkspaces] = useState([])
   useEffect(() => {
@@ -22,11 +22,12 @@ const Filter = () => {
       setfiltered(workspaces.filter(iter => iter.city === 'Vilnius'))
     } else if (event.target.value === 'Kaunas'){
       setfiltered(workspaces.filter(iter => iter.city === 'Kaunas'))
-    } else {
+    } else if (event.target.value === 'All') {
       setfiltered(workspaces)
     }
-
   }
+  
+  
   
 
   return (
@@ -37,7 +38,6 @@ const Filter = () => {
         <option value="London">London</option>
         <option value="Vilnius">Vilnius</option>
         <option value="Kaunas">Kaunas</option>
-        
       </select>
       
       {filtered.map(item => {
