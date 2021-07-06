@@ -12,6 +12,7 @@ import Maptwo from './components/common/Maptwo.js'
 import Events from './components/common/EventSection/Events.js'
 import Login from './components/auth/Login.js'
 import Register from './components/auth/Register'
+import Filter from './components/common/Filter.js'
 
 
 const App = () => {
@@ -27,15 +28,19 @@ const App = () => {
       </Switch>
       
       <Switch>
-        <Route excact path='/map' component={Map}/>
+        <Route exact path='/map' component={Map}/>
       </Switch>
       <Switch>
-        <Route excact path='/maptwo' component={Maptwo}/>
+        <Route exact path='/maptwo' component={Maptwo}/>
+      </Switch>
+
+      <Switch>
+        <Route exact path='/filter' component={Filter}/>
       </Switch>
       
-      {/* <Switch>
-        <Route excact path='/' component={Footer}/>
-      </Switch> */}
+      <Switch>
+        <Route exact path='/' component={Footer}/>
+      </Switch>
 
       <Footer/>
       
