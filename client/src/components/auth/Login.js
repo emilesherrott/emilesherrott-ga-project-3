@@ -11,7 +11,7 @@ const Login = () => {
     password: '',
   })
 
-  const notify = () => toast.success(`Welcome ${formdata.email} !`, { autoClose: 5000 })
+  const notify = () => toast.success(`Welcome ${formdata.email} !`, { autoClose: 3000 })
 
   const handleChange = (event) => {
     const newFormdata = { ...formdata, [event.target.name]: event.target.value }
@@ -30,8 +30,7 @@ const Login = () => {
       // console.log(formdata.email)
       setTimeout(function(){
         history.push('/')
-      }, 1000)
-
+      }, 2000)
       // console.log('token', data.token)
       // console.log('response', response)
     } catch (err) {
