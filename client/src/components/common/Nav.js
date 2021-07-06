@@ -1,7 +1,22 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Link, useHistory, useLocation } from 'react-router-dom'
+import { userIsAuthenticated } from '../../helpers/auth'
 
 const Nav = () => {
+
+
+  const history = useHistory()
+
+  const { pathname } = useLocation()
+
+  const handleLogout = () => {
+    window.localStorage.removeItem('token')
+    history.push('/')
+  }
+
+  useEffect(() => {
+    userIsAuthenticated()
+  }, [pathname])
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -21,8 +36,18 @@ const Nav = () => {
               <Link to="/contact-us" className="nav-link">CONTACT US</Link>
             </li>
             <li className="nav-item">
-              <Link to="/login" className="nav-link">LOGIN</Link>
+              <Link to="/workspaces/new" className="nav-link">REGISTER A WORKSPACE </Link>
             </li>
+            {!userIsAuthenticated() ?
+              <li className="nav-item">
+                <Link to="/login" className="nav-link">LOGIN</Link>
+              </li>
+              :
+              <li className="nav-item">
+                <span onClick={handleLogout} className="nav-link">LOG OUT</span>
+              </li>
+            }
+
           </ul>
         </div>
       </div>

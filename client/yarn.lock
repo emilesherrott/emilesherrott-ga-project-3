@@ -9735,6 +9735,8 @@ react-scripts@4.0.3:
   optionalDependencies:
     fsevents "^2.1.3"
 
+<<<<<<< HEAD
+=======
 react-toast-notifications@^2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/react-toast-notifications/-/react-toast-notifications-2.5.0.tgz#07a2f9f469fcb3b133f8621c596b55b0aa96b0de"
@@ -9754,6 +9756,7 @@ react-toast-notifier@^1.0.3:
     event-emitter "^0.3.5"
     styled-components "^4.4.1"
 
+>>>>>>> development
 react-toastify@^7.0.4:
   version "7.0.4"
   resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-7.0.4.tgz#7d0b743f2b96f65754264ca6eae31911a82378db"
