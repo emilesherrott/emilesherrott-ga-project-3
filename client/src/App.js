@@ -38,10 +38,6 @@ const App = () => {
         <Route exact path='/filter' component={Filter}/>
       </Switch>
       
-      <Switch>
-        <Route exact path='/' component={Footer}/>
-      </Switch>
-
       <Footer/>
       
     </Router>

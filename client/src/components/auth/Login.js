@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-// import { useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 const Login = () => {
-  // const history = useHistory()
+  const history = useHistory()
   const [formdata, setFormdata] = useState({
     email: '',
     password: '',
@@ -28,7 +28,10 @@ const Login = () => {
       setTokenToLocalStorage(data.token)
       notify()
       // console.log(formdata.email)
-      // history.push('/')
+      setTimeout(function(){
+        history.push('/')
+      }, 1000)
+
       // console.log('token', data.token)
       // console.log('response', response)
     } catch (err) {
