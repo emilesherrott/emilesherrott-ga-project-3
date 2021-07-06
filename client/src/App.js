@@ -9,6 +9,7 @@ import Maptwo from './components/common/Maptwo'
 import Events from './components/common/EventSection/Events'
 import Login from './components/auth/Login'
 import Register from './components/auth/Register'
+import Filter from './components/common/Filter.js'
 
 import WorkspacesNew from './components/common/Workspaces/WorkspacesNew'
 const App = () => {
@@ -22,10 +23,12 @@ const App = () => {
         <Route exact path='/events' component={Events} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
-        <Route excact path='/map' component={Map}/>
-        <Route excact path='/maptwo' component={Maptwo}/>
+        <Route exact path='/map' component={Map} />
+        <Route exact path='/maptwo' component={Maptwo} />
+        <Route exact path='/filter' component={Filter} />
+        <Route exact path='/' component={Footer} />
       </Switch>
-      <Footer/>
+      <Footer />
     </Router>
   )
 }
