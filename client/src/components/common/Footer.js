@@ -112,7 +112,7 @@ const Footer = () => {
                   <a href="#!" className="text-reset">Landlords</a>
                 </p>
                 <p>
-                  <a href="#!" className="text-reset">Landladies</a>
+                  <a href="/filter" className="text-reset">Filter</a>
                 </p>
                 <p>
 
