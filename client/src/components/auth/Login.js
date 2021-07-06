@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom' 
+import { useHistory } from 'react-router-dom'
 import axios from 'axios'
 
 const Login = () => {
@@ -8,7 +8,6 @@ const Login = () => {
     email: '',
     password: '',
   })
-  
 
   const handleChange = (event) => {
     const newFormdata = { ...formdata, [event.target.name]: event.target.value }
@@ -31,28 +30,28 @@ const Login = () => {
     }
   }
   // console.log('form data on state', formdata)
-  
+
   return (
     <div className="row justify-content-center">
       <div className="col-sm-12 col-md-3">
         <form className="px-4 py-3" onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="exampleDropdownFormEmail1" className="form-label">Email address</label>
-            <input onChange={handleChange} 
-              type="email" 
+            <input onChange={handleChange}
+              type="email"
               name="email"
-              className="form-control" 
-              id="exampleDropdownFormEmail1" 
-              placeholder="email@example.com" 
+              className="form-control"
+              id="exampleDropdownFormEmail1"
+              placeholder="email@example.com"
               value={formdata.email} />
           </div>
           <div className="mb-3">
             <label htmlFor="exampleDropdownFormPassword1" className="form-label">Password</label>
-            <input onChange={handleChange} type="password" name="password" className="form-control" id="exampleDropdownFormPassword1" placeholder="Password" value={formdata.password}/>
+            <input onChange={handleChange} type="password" name="password" className="form-control" id="exampleDropdownFormPassword1" placeholder="Password" value={formdata.password} />
           </div>
           <div className="mb-3">
             <div className="form-check">
-              <input type="checkbox" className="form-check-input" id="dropdownCheck"/>
+              <input type="checkbox" className="form-check-input" id="dropdownCheck" />
               <label className="form-check-label" htmlFor="dropdownCheck">Remember me</label>
             </div>
           </div>

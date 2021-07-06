@@ -113,7 +113,7 @@ export default [
   },
   {
     name: 'Kaunas Bar',
-    address: 'Gedimino Avenue 9',
+    address: 'Gedimino Ave 9',
     city: 'Kaunas',
     postcode: 'LT-01106',
     country: 'Lithuania',

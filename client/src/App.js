@@ -28,18 +28,18 @@ const App = () => {
       </Switch>
       
       <Switch>
-        <Route excact path='/map' component={Map}/>
+        <Route exact path='/map' component={Map}/>
       </Switch>
       <Switch>
-        <Route excact path='/maptwo' component={Maptwo}/>
+        <Route exact path='/maptwo' component={Maptwo}/>
       </Switch>
 
       <Switch>
-        <Route excact path='/filter' component={Filter}/>
+        <Route exact path='/filter' component={Filter}/>
       </Switch>
       
       <Switch>
-        <Route excact path='/' component={Footer}/>
+        <Route exact path='/' component={Footer}/>
       </Switch>
 
       <Footer/>
