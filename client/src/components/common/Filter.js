@@ -3,7 +3,6 @@ import axios from 'axios'
 
 
 const Filter = () => {
- 
   const [filtered,setfiltered] = useState([])
   const [workspaces, setWorkspaces] = useState([])
   useEffect(() => {
@@ -12,10 +11,10 @@ const Filter = () => {
       setWorkspaces(data)
     }
     getData()
-  }, [])
+  },[])
 
   
-  function handleChange (event) {
+  function handleCity (event) {
     if (event.target.value === 'London') {
       setfiltered(workspaces.filter(iter => iter.city === 'London')) 
     } else if (event.target.value === 'Vilnius'){
@@ -26,14 +25,30 @@ const Filter = () => {
       setfiltered(workspaces)
     }
   }
-  
+
+  function handleCountry() {
+    console.log('this shit works')
+    if (event.target.value === 'Lithuania') {
+      setfiltered(workspaces.filter(iter => iter.country === 'Lithuania')) 
+    } else if (event.target.value === 'United Kingdom'){
+      setfiltered(workspaces.filter(iter => iter.country === 'United Kingdom'))
+    }
+  }
   
   
 
   return (
     <>
+
+      <label >Choose a Country:</label>
+      <select name="countries-sa" id="countries-sa" onChange={handleCountry}>
+        <option value="All">All</option>
+        <option value="United Kingdom">United Kingdom</option>
+        <option value="Lithuania">Lithuania</option>
+      </select>
+      
       <label >Choose a city:</label>
-      <select name="cars" id="cars" onChange={handleChange}>
+      <select name="cities-sa" id="cities-sa" onChange={handleCity}>
         <option value="All">All</option>
         <option value="London">London</option>
         <option value="Vilnius">Vilnius</option>
