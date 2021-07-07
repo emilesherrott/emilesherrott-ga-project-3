@@ -50,7 +50,7 @@ const MapTwo = ({ myData, filteredData }) => {
 
           })}
           {popup &&
-            myData.map(iter => {
+            (filteredData.length ? filteredData : myData).map(iter => {
               return (
                 <Popup key={iter._id}
                   latitude={parseFloat(iter.lat)}
