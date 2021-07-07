@@ -10,6 +10,7 @@ import Events from './components/common/EventSection/Events'
 import Login from './components/auth/Login'
 import Register from './components/auth/Register'
 import Filter from './components/common/Filter.js'
+import ContactForm from './components/common/EventSection/ContactForm'
 
 import WorkspacesNew from './components/common/Workspaces/WorkspacesNew'
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
         <Route exact path='/maptwo' component={Maptwo} />
         <Route exact path='/filter' component={Filter} />
         <Route exact path='/' component={Footer} />
+        <Route exact path='/contactform' component={ContactForm} />
       </Switch>
       <Footer />
     </Router>
