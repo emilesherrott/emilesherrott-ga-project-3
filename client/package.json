@@ -19,11 +19,8 @@
     "react-map-gl": "^6.1.16",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
-<<<<<<< HEAD
-=======
     "react-toast-notifications": "^2.5.0",
     "react-toast-notifier": "^1.0.3",
->>>>>>> development
     "react-toastify": "^7.0.4",
     "sass": "^1.32.8"
   },
