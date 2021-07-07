@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import ReactMapGL, { Marker, Popup } from 'react-map-gl'
+import ReactMapGL, { Marker } from 'react-map-gl'
 import { Link } from 'react-router-dom'
 
 const Maptwo = () => {
@@ -37,6 +37,8 @@ const Maptwo = () => {
   // console.log(viewPort)
 
 
+
+  
   return (
     <>
       <div className="map-container">
@@ -59,22 +61,20 @@ const Maptwo = () => {
             </Marker>)
 
           })}
-          {popup &&
+          {/* {popup &&
             myData.map(iter => {
               return (
                 <Popup key={iter._id}
                   latitude={parseFloat(iter.lat)}
                   longitude={parseFloat(iter.long)}
-                  // closeOnClick={true}
                   onClose={() => setPopup(null)}
                 >
                   <div>{iter.name}</div>
-                  
                 </Popup>
 
               )
             })
-          }
+          } */}
           <Link to={'/'}>
             <button type="button" className="btn btn-info btn-sm">Go Back</button>
           </Link>

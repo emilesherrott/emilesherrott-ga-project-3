@@ -38,9 +38,9 @@ const App = () => {
         <Route excact path='/filter' component={Filter}/>
       </Switch>
       
-      <Switch>
+      {/* <Switch>
         <Route excact path='/' component={Footer}/>
-      </Switch>
+      </Switch> */}
 
       <Footer/>
       

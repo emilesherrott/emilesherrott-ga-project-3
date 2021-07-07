@@ -17,7 +17,7 @@ const Register = () => {
     email: '',
     password: '',
     passwordConfirmation: '',
-  })
+  },[])
 
   const notify = () => toast.success(`Welcome ${formdata.username} !`, { autoClose: 5000 })
 
@@ -31,7 +31,6 @@ const Register = () => {
     event.preventDefault()
     try {
       await axios.post('/api/register', formdata)
-      notify()
       history.push('/login')
     } catch (err) {
       // console.log(err)
