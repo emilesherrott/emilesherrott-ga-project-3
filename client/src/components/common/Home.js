@@ -4,6 +4,7 @@
 //BOX FOR SOMTHING....
 
 import React from 'react'
+import { Link } from 'react-router-dom'
 import office1 from '../../assets/home_assets/office1.jpg'
 import office2 from '../../assets/home_assets/office2.jpg'
 import office3 from '../../assets/home_assets/office3.jpg'
@@ -28,7 +29,7 @@ const Home = () => {
                 <h3 className="card-title text-center">Reimagine your workspace</h3>
                 <p className="card-text text-center">Find some good spaces to work across the globe or close to you:</p>
                 <div className="d-grid">
-                  <button type="button" className="btn btn-outline-primary btn-lg">Start</button>
+                  <Link to="/indexandmap" type="button" className="btn btn-outline-primary btn-lg changingcolor1 taras3" id="changingcolor">Start</Link>
                 </div>
               </div>
             </div>
@@ -67,43 +68,43 @@ const Home = () => {
           <div className="col taras1">
             <div className="container">
               <div className="card border rounded ">
-                <a href="#" type="button" className="btn btn-outline-secondary box-shadow">
+                <Link to="/indexandmap" type="button" className="btn btn-outline-secondary box-shadow changingcolor2 card1">
                   <div className="card-body">
-                    <h3 className="card-title text-center">Looking for an office space?</h3>
+                    <h3 className="card-title text-center ">Looking for an office space?</h3>
                     <img src={officespace} className="d-block w-100" alt="officespace" />
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
           <div className="col taras1">
             <div className="container">
               <div className="card border rounded">
-                <a href="#" type="button" className="btn btn-outline-secondary box-shadow">
+                <Link to="/indexandmap"type="button" className="btn btn-outline-secondary box-shadow changingcolor2" id="changingcolor">
                   <div className="card-body">
                     <h3 className="card-title text-center">Looking for a desk space?</h3>
                     <img src={deskspace} className="d-block w-100" alt="deskspace" />
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
           <div className="col taras1">
             <div className="container">
               <div className="card border rounded">
-                <a href="#" type="button" className="btn btn-outline-secondary box-shadow">
+                <Link to="/indexandmap" type="button" className="btn btn-outline-secondary box-shadow changingcolor2" id="changingcolor">
                   <div className="card-body">
                     <h3 className="card-title text-center">Looking for an open space?</h3>
                     <img src={openworkspace} className="d-block w-100" alt="openworkspace" />
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
           <div className="col taras1">
             <div className="container">
               <div className="card border rounded">
-                <a href="/events" type="button" className="btn btn-outline-secondary box-shadow">
+                <a href="/events" type="button" className="btn btn-outline-secondary box-shadow changingcolor2" id="changingcolor">
                   <div className="card-body">
                     <h3 className="card-title text-center">Looking for an event space?</h3>
                     <img src={eventspace} className="d-block w-100" alt="eventspace" />

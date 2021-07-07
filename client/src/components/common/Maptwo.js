@@ -1,23 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-import ReactMapGL, { Marker } from 'react-map-gl'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import ReactMapGL, { Marker, Popup } from 'react-map-gl'
+// import { Link } from 'react-router-dom'
 
-const Maptwo = () => {
+const MapTwo = ({ myData, filteredData }) => {
 
-  const [myData, setMyData] = useState([])
   const [popup, setPopup] = useState(null)
 
   console.log(popup)
 
-  useEffect(() => {
-    const getData = async () => {
-      const { data } = await axios.get('/api/workspaces')
-      setMyData(data)
-    }
-    getData()
-  }, [])
-  console.log(myData)
 
   const [viewport, setViewport] = useState({
     latitude: 52.515,
@@ -44,8 +34,8 @@ const Maptwo = () => {
       <div className="map-container">
         <ReactMapGL
           mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
-          height='100%'
-          width='100%'
+          height='80vh'
+          width='80vh'
           mapStyle='mapbox://styles/mapbox/streets-v11'
           {...viewport}
           //   latitude={-51.550320}
@@ -53,16 +43,16 @@ const Maptwo = () => {
           //   zoom={10}
           onViewportChange={(viewport) => setViewport(viewport)}
         >
-          {myData.map(iter => {
+          {(filteredData.length ? filteredData : myData).map(iter => {
             return (<Marker key={iter._id} latitude={parseFloat(iter.lat)} longitude={parseFloat(iter.long)}>
               <span onClick={() => setPopup(myData)}>
-                {'😜'}
+                {'📍'}
               </span>
             </Marker>)
 
           })}
-          {/* {popup &&
-            myData.map(iter => {
+          {popup &&
+            (filteredData.length ? filteredData : myData).map(iter => {
               return (
                 <Popup key={iter._id}
                   latitude={parseFloat(iter.lat)}
@@ -74,10 +64,10 @@ const Maptwo = () => {
 
               )
             })
-          } */}
-          <Link to={'/'}>
+          }
+          {/* <Link to={'/'}>
             <button type="button" className="btn btn-info btn-sm">Go Back</button>
-          </Link>
+          </Link> */}
           {/* <Marker latitude={-51.550320} longitude={-0.108110}>
         
           </Marker> */}
@@ -87,6 +77,6 @@ const Maptwo = () => {
     </>
   )
 }
-export default Maptwo
+export default MapTwo
 
 //  {-0.108110:-0.115220},{51.550320:51.513100}

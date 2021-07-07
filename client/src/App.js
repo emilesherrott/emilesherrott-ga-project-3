@@ -1,49 +1,39 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-
-import Home from './components/common/Home.js'
-import Nav from './components/common/Nav.js'
-import Footer from './components/common/Footer.js'
-
-import Ideas from './components/Ideas.js'
-
-import Map from './components/common/Map.js'
-import Maptwo from './components/common/Maptwo.js'
-import Events from './components/common/EventSection/Events.js'
-import Login from './components/auth/Login.js'
+import Home from './components/common/Home'
+import Nav from './components/common/Nav'
+import Footer from './components/common/Footer'
+import Ideas from './components/Ideas'
+import Map from './components/common/Map'
+import MapTwo from './components/common/MapTwo'
+import Events from './components/common/EventSection/Events'
+import Login from './components/auth/Login'
 import Register from './components/auth/Register'
-import Filter from './components/common/Filter.js'
+// import Filter from './components/common/Filter.js'
+import ContactForm from './components/common/EventSection/ContactForm'
+import Filter from './components/common/Filter'
+import IndexAndMap from './components/common/IndexAndMap'
 
-
+import WorkspacesNew from './components/common/Workspaces/WorkspacesNew'
 const App = () => {
   return (
     <Router>
       <Nav />
       <Switch>
         <Route exact path='/' component={Home} />
+        <Route exact path='/workspaces/new' component={WorkspacesNew} />
         <Route path="/ideas" component={Ideas} />
         <Route exact path='/events' component={Events} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
+        <Route exact path='/map' component={Map} />
+        <Route exact path='/maptwo' component={MapTwo} />
+        <Route exact path='/filter' component={Filter} />
+        {/* <Route exact path='/' component={Footer} /> */}
+        <Route exact path='/contactform' component={ContactForm} />
+        <Route exact path='/indexandmap' component={IndexAndMap} />
       </Switch>
-      
-      <Switch>
-        <Route excact path='/map' component={Map}/>
-      </Switch>
-      <Switch>
-        <Route excact path='/maptwo' component={Maptwo}/>
-      </Switch>
-
-      <Switch>
-        <Route excact path='/filter' component={Filter}/>
-      </Switch>
-      
-      {/* <Switch>
-        <Route excact path='/' component={Footer}/>
-      </Switch> */}
-
-      <Footer/>
-      
+      <Footer />
     </Router>
   )
 }

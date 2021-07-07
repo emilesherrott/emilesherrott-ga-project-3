@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom' 
+import { useHistory } from 'react-router-dom'
 import axios from 'axios'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Login = () => {
   
@@ -9,7 +11,8 @@ const Login = () => {
     email: '',
     password: '',
   })
-  
+
+  const notify = () => toast.success(`Welcome ${formdata.email} !`, { autoClose: 3000 })
 
   const handleChange = (event) => {
     const newFormdata = { ...formdata, [event.target.name]: event.target.value }
@@ -24,7 +27,11 @@ const Login = () => {
     try {
       const { data } = await axios.post('api/login', formdata)
       setTokenToLocalStorage(data.token)
-      history.push('/')
+      notify()
+      // console.log(formdata.email)
+      setTimeout(function(){
+        history.push('/')
+      }, 2000)
       // console.log('token', data.token)
       // console.log('response', response)
     } catch (err) {
@@ -32,38 +39,43 @@ const Login = () => {
     }
   }
   // console.log('form data on state', formdata)
-  
+
   return (
-    <div className="row justify-content-center">
-      <div className="col-sm-12 col-md-3">
-        <form className="px-4 py-3" onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label htmlFor="exampleDropdownFormEmail1" className="form-label">Email address</label>
-            <input onChange={handleChange} 
-              type="email" 
-              name="email"
-              className="form-control" 
-              id="exampleDropdownFormEmail1" 
-              placeholder="email@example.com" 
-              value={formdata.email} />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="exampleDropdownFormPassword1" className="form-label">Password</label>
-            <input onChange={handleChange} type="password" name="password" className="form-control" id="exampleDropdownFormPassword1" placeholder="Password" value={formdata.password}/>
-          </div>
-          <div className="mb-3">
-            <div className="form-check">
-              <input type="checkbox" className="form-check-input" id="dropdownCheck"/>
-              <label className="form-check-label" htmlFor="dropdownCheck">Remember me</label>
-            </div>
-          </div>
-          <button type="submit" className="btn btn-primary" id="buttonSignIn">Sign in</button>
-        </form>
-        <div className="dropdown-divider"></div>
-        <a className="dropdown-item" href="/register">New around here? Sign up</a>
-        <a className="dropdown-item" href="#">Forgot password?</a>
+    <>
+      <div>
+        <ToastContainer />
       </div>
-    </div>
+      <div className="row justify-content-center">
+        <div className="col-sm-12 col-md-3">
+          <form className="px-4 py-3" onSubmit={handleSubmit}>
+            <div className="mb-3">
+              <label htmlFor="exampleDropdownFormEmail1" className="form-label">Email address</label>
+              <input onChange={handleChange}
+                type="email"
+                name="email"
+                className="form-control"
+                id="exampleDropdownFormEmail1"
+                placeholder="email@example.com"
+                value={formdata.email} />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="exampleDropdownFormPassword1" className="form-label">Password</label>
+              <input onChange={handleChange} type="password" name="password" className="form-control" id="exampleDropdownFormPassword1" placeholder="Password" value={formdata.password} />
+            </div>
+            <div className="mb-3">
+              <div className="form-check">
+                <input type="checkbox" className="form-check-input" id="dropdownCheck" />
+                <label className="form-check-label" htmlFor="dropdownCheck">Remember me</label>
+              </div>
+            </div>
+            <button type="submit" className="btn btn-primary changingcolor1" id="changingcolor" >Sign in</button>
+          </form>
+          <div className="dropdown-divider"></div>
+          <a className="dropdown-item" href="/register">New around here? Sign up</a>
+          <a className="dropdown-item" href="#">Forgot password?</a>
+        </div>
+      </div>
+    </>
   )
 }
 
