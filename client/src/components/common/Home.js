@@ -4,6 +4,7 @@
 //BOX FOR SOMTHING....
 
 import React from 'react'
+import { Link } from 'react-router-dom'
 import office1 from '../../assets/home_assets/office1.jpg'
 import office2 from '../../assets/home_assets/office2.jpg'
 import office3 from '../../assets/home_assets/office3.jpg'
@@ -67,12 +68,12 @@ const Home = () => {
           <div className="col taras1">
             <div className="container">
               <div className="card border rounded ">
-                <a href="#" type="button" className="btn btn-outline-secondary box-shadow changingcolor2" id="changingcolor">
+                <Link to="/indexandmap" type="button" className="btn btn-outline-secondary box-shadow">
                   <div className="card-body">
                     <h3 className="card-title text-center">Looking for an office space?</h3>
                     <img src={officespace} className="d-block w-100" alt="officespace" />
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

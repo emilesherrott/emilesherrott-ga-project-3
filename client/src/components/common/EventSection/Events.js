@@ -11,6 +11,12 @@ const Events = () => {
 
   const [count, setCount] = useState(0) //!using this for rerender
 
+  const userIsOwner = (userId) => {
+    const payload = getPayload()
+    if (!payload) return false
+    return userId === payload.sub
+  }
+
   const userIsAuthenticated = () => {
     // console.log('hi')
     const payload = getPayload()
@@ -45,13 +51,15 @@ const Events = () => {
     text: '',
     rating: '',
   })
-  console.log(errors)
-  
+  // const [errors, setErrors] = useState(null)
+  // console.log(errors)
+
 
   const handleChange = (event) => {
     const newComment = { ...comment, [event.target.name]: event.target.value }
     console.log(event.target.name)
-    const newErrors = { ...errors.rating, [event.target.name]: '' }
+    const newErrors = { ...errors, [event.target.name]: '' }
+    // const newErrors = { ...errors }
     setComment(newComment)
     setErrors(newErrors)
   }
@@ -62,9 +70,10 @@ const Events = () => {
   const getId = (event) => {
     setCommentedVenueId(event.target.id)
   }
+  console.log(commentedVenueId)
 
   const history = useHistory()
-  
+
   const handleSubmit = async (event) => {
     event.preventDefault()
     try {
@@ -77,7 +86,40 @@ const Events = () => {
       history.push('/events')
       setCount(prevCount => prevCount + 1)
     } catch (error) {
-      setErrors(error.response.data.message)
+      console.log(errors)
+      setErrors(error.response.config.data)
+
+      // setErrors(((JSON.stringify(error.response.config.data).split('').slice(4, 8).join('') + 
+      // ': "Please fill the comment field", ') + (JSON.stringify(error.response.config.data).split('').slice(18, 24).join('') +
+      // ': "Please choose a rating"'
+      // )))
+
+    }
+  }
+
+  const [commentId, setCommentId] = useState('')
+  const getCommentId = (event) => {
+
+    event.preventDefault()
+    console.log(event)
+    setCommentId(event.target.id)
+  }
+  console.log(commentId)
+
+
+  const deleteComment = async (event) => {
+    event.preventDefault()
+    console.log('deleting')
+    try {
+      await axios.delete(`api/workspaces/${commentedVenueId}/comments/${commentId}`,
+        {
+          headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` },
+        }
+      )
+      history.push('/events')
+      setCount(prevCount => prevCount - 1)
+    } catch (error) {
+      console.log(error)
     }
   }
 
@@ -111,7 +153,7 @@ const Events = () => {
                             <a href={item.link} className="btn btn-outline-primary btn-lg changingcolor1" id="changingcolor">See location website</a>
                           </div>
                           <p className="d-grid taras2">
-                            <button className="btn btn-outline-primary btn-sm changingcolor1" id="changingcolor" type="button" data-bs-toggle="collapse" data-bs-target={`#id${index}`} aria-expanded="false" aria-controls={`id${index}`}>Comments and rating</button>
+                            <button className="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target={`#id${index}`} aria-expanded="false" aria-controls={`id${index}`} id={item._id} onClick={getId}>Comments and rating</button>
                           </p>
                           <div className="row">
                             <div className="col">
@@ -121,39 +163,44 @@ const Events = () => {
                                     <form onSubmit={handleSubmit}>
                                       <div className="">
                                         <div className="form-floating">
-                                          <textarea className="form-control" placeholder="Leave a comment here" id="InputComment1" onChange={handleChange} name="text"></textarea>
+                                          <textarea className="form-control" placeholder="Leave a comment here" id="InputComment1" onChange={handleChange} name="text" rows="4"></textarea>
+                                          <label htmlFor="InputComment1">Your comment:</label>
                                         </div>
-                                        {/* {errors ? <p className="help is-danger">Another stuff</p> : '' } */}
-                                        {/* {errors && <p className="help is-danger">{errors.text}</p>} */}
-                                        <div id="commentHelp" className="form-text">Leave your comment here.</div>
+                                        {/* {errors && <p className="help is-danger">Please add comment first</p>} */}
+                                        <div id="InputComment1" className="form-text">Leave your comment here.</div>
                                       </div>
                                       <div className="form-floating">
                                         <select defaultValue={'DEFAULT'} className="form-select" id="floatingSelect" aria-label="Floating label select example" placeholder="choose your mark" onChange={handleChange} name="rating">
                                           <option value="DEFAULT" disabled>Select from following:</option>
-                                          <option value="1">1 star</option>
-                                          <option value="2">2 stars</option>
-                                          <option value="3">3 stars</option>
-                                          <option value="4">4 stars</option>
-                                          <option value="5">5 stars</option>
+                                          <option value="1">1 out of 5</option>
+                                          <option value="2">2 out of 5</option>
+                                          <option value="3">3 out of 5</option>
+                                          <option value="4">4 out of 5</option>
+                                          <option value="5">5 out of 5</option>
                                         </select>
+                                        {/* {errors && <p className="help is-danger">Please add rating first</p>} */}
                                         {/* {errors.name && <p className="help is-danger">{errors.rating}</p>} */}
-                                        <label htmlFor="floatingSelect">Rate it with stars:</label>
-                                        <div id="commentRating" className="form-text">Choose a number of stars given.</div>
+                                        <label htmlFor="floatingSelect">Rate the venue:</label>
+                                        <div id="commentRating" className="form-text">Choose your rating.</div>
                                       </div>
                                       <p className="d-grid taras2">
                                         <button type="submit" className="btn btn-primary btn-sm taras3" id={item._id} onClick={getId}>Add a comment</button>
+                                        {/* {errors ? <i className="help is-danger">Please leave a rating and comment first</i> : '' } */}
                                       </p>
                                     </form>
                                     :
-                                    <Link to="/login"><button typ="button" className="btn btn-warning">Please login to access comments.</button></Link>
+                                    <Link to="/login"><button typ="button" className="btn btn-warning taras5">Please login to access comments.</button></Link>
                                   }
                                   <div>{item.comments.map(comment => {
                                     return (
                                       <>
-                                        <div key={comment._id}>
-                                          <p>Rating: {comment.rating} out of 5.</p>
-                                          <p>Comment: {comment.text}</p>
-                                          <p>Created at: {comment.createdAt}</p>
+                                        <div className="card" key={comment._id}>
+                                          <div className="card-body">
+                                            <h5 className="card-title">Rating: {comment.rating} out of 5.</h5>
+                                            <p className="card-text">Comment: {comment.text}</p>
+                                            <h6 className="card-subtitle mb-2 text-muted taras4">Created at: {comment.createdAt.replace(/T/g, ' ').slice(0, -5)}</h6>
+                                            {userIsOwner(comment.owner) && <a href="" className="card-link" onMouseOver={getCommentId} onClick={deleteComment} id={comment._id}>Delete this comment</a>}
+                                          </div>
                                         </div>
                                       </>
                                     )
