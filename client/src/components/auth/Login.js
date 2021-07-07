@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
-// import { useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 const Login = () => {
-  // const history = useHistory()
+  const history = useHistory()
   const [formdata, setFormdata] = useState({
     email: '',
     password: '',
   })
 
-  const notify = () => toast.success(`Welcome ${formdata.email} !`, { autoClose: 5000 })
+  const notify = () => toast.success(`Welcome ${formdata.email} !`, { autoClose: 3000 })
 
   const handleChange = (event) => {
     const newFormdata = { ...formdata, [event.target.name]: event.target.value }
@@ -28,7 +28,9 @@ const Login = () => {
       setTokenToLocalStorage(data.token)
       notify()
       // console.log(formdata.email)
-      // history.push('/')
+      setTimeout(function(){
+        history.push('/')
+      }, 2000)
       // console.log('token', data.token)
       // console.log('response', response)
     } catch (err) {
