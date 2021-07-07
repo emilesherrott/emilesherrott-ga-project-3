@@ -4,7 +4,7 @@ import Home from './components/common/Home'
 import Nav from './components/common/Nav'
 import Footer from './components/common/Footer'
 import Ideas from './components/Ideas'
-import Map from './components/common/Map'
+import MapOne from './components/common/MapOne'
 import MapTwo from './components/common/MapTwo'
 import Events from './components/common/EventSection/Events'
 import Login from './components/auth/Login'
@@ -24,7 +24,7 @@ const App = () => {
         <Route exact path='/events' component={Events} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
-        <Route exact path='/map' component={Map} />
+        <Route exact path='/mapone' component={MapOne} />
         <Route exact path='/maptwo' component={MapTwo} />
         <Route exact path='/filter' component={Filter} />
         <Route exact path='/indexandmap' component={IndexAndMap} />
