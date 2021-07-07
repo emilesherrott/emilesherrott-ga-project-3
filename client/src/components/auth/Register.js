@@ -30,13 +30,9 @@ const Register = () => {
     event.preventDefault()
     try {
       await axios.post('/api/register', formdata)
-<<<<<<< HEAD
-      history.push('/login')
-=======
       // console.log(formdata.username)
       
       // history.push('/login')
->>>>>>> f93263ee956a46576795f0113a0ab06eef595153
     } catch (err) {
       // console.log(err)
       // setErrors(err.response.data.errors) 

@@ -8,7 +8,7 @@ import React from 'react'
 import facebook from '../../assets/footer/facebook.png'
 import instagram from '../../assets/footer/instagram.png'
 import tweeter from '../../assets/footer/tweeter.png'
-import linkedin from '../../assets/footer/linkedin.jpg'
+import linkedin from '../../assets/footer/linkedin.png'
 // import { Link } from 'react-router-dom'
 
 
@@ -33,20 +33,20 @@ const Footer = () => {
 
           <div>
             <a href="" className="me-4 text-reset">
-              <i className="fab fa-facebook-f"></i>
+              <i className="fab fa-facebook-f "></i>
               <img src={facebook} width="40px" height="40px"></img>
             </a>
             <a href="" className="me-4 text-reset">
               <i className="fab fa-linkedin"></i>
-              <img src={linkedin} width="65px" height="65px"></img>
+              <img src={linkedin} width="48px" height="48px"></img>
             </a>
             <a href="" className="me-4 text-reset">
               <i className="fab fa-twitter"></i>
-              <img src={tweeter} width="50px" height="50px"></img>
+              <img src={tweeter} width="48px" height="48px"></img>
             </a>
             <a href="" className="me-4 text-reset">
               <i className="fab fa-instagram"></i>
-              <img src={instagram} width="60px" height="45px"></img>
+              <img src={instagram} width="42px" height="48px"></img>
             </a>
 
           </div>
