@@ -181,11 +181,11 @@ const WorkspacesForm = ({
 
 
           <div className="emile-start">
-            <label className="">Submit</label>
+            <label className=""></label>
             <div className="">
               <input
                 type="submit"
-                className=""
+                className="btn btn-primary changingcolor1" id="changingcolor" //MAKE THE BUTTON SAME COLOR OF THE SIGN IN AND REGISTER
                 placeholder="Submit"
                 name="submit"
                 value={text} />

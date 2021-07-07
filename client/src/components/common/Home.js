@@ -28,7 +28,7 @@ const Home = () => {
                 <h3 className="card-title text-center">Reimagine your workspace</h3>
                 <p className="card-text text-center">Find some good spaces to work across the globe or close to you:</p>
                 <div className="d-grid">
-                  <button type="button" className="btn btn-outline-primary btn-lg">Start</button>
+                  <button type="button" className="btn btn-outline-primary btn-lg changingcolor1" id="changingcolor">Start</button>
                 </div>
               </div>
             </div>
@@ -67,7 +67,7 @@ const Home = () => {
           <div className="col taras1">
             <div className="container">
               <div className="card border rounded ">
-                <a href="#" type="button" className="btn btn-outline-secondary box-shadow">
+                <a href="#" type="button" className="btn btn-outline-secondary box-shadow changingcolor2" id="changingcolor">
                   <div className="card-body">
                     <h3 className="card-title text-center">Looking for an office space?</h3>
                     <img src={officespace} className="d-block w-100" alt="officespace" />
@@ -79,7 +79,7 @@ const Home = () => {
           <div className="col taras1">
             <div className="container">
               <div className="card border rounded">
-                <a href="#" type="button" className="btn btn-outline-secondary box-shadow">
+                <a href="#" type="button" className="btn btn-outline-secondary box-shadow changingcolor2" id="changingcolor">
                   <div className="card-body">
                     <h3 className="card-title text-center">Looking for a desk space?</h3>
                     <img src={deskspace} className="d-block w-100" alt="deskspace" />
@@ -91,7 +91,7 @@ const Home = () => {
           <div className="col taras1">
             <div className="container">
               <div className="card border rounded">
-                <a href="#" type="button" className="btn btn-outline-secondary box-shadow">
+                <a href="#" type="button" className="btn btn-outline-secondary box-shadow changingcolor2" id="changingcolor">
                   <div className="card-body">
                     <h3 className="card-title text-center">Looking for an open space?</h3>
                     <img src={openworkspace} className="d-block w-100" alt="openworkspace" />
@@ -103,7 +103,7 @@ const Home = () => {
           <div className="col taras1">
             <div className="container">
               <div className="card border rounded">
-                <a href="/events" type="button" className="btn btn-outline-secondary box-shadow">
+                <a href="/events" type="button" className="btn btn-outline-secondary box-shadow changingcolor2" id="changingcolor">
                   <div className="card-body">
                     <h3 className="card-title text-center">Looking for an event space?</h3>
                     <img src={eventspace} className="d-block w-100" alt="eventspace" />

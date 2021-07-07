@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link, useHistory, useLocation } from 'react-router-dom'
 import { userIsAuthenticated } from '../../helpers/auth'
+import LogoHome from '../../assets/home_assets/LogoHome2.png'
 
 const Nav = () => {
 
@@ -21,7 +22,7 @@ const Nav = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <Link to="/" className="navbar-brand" href="#">CEST</Link>
+        <Link to="/" className="navbar-brand"><img src={LogoHome} id="mainlogo"></img></Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>

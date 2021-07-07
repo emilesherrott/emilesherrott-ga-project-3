@@ -87,7 +87,7 @@ const Register = () => {
               <label className="form-check-label" htmlFor="dropdownCheck">Remember me</label>
             </div>
           </div>
-          <button type="submit" className="btn btn-primary" id="buttonSignIn">Register</button>
+          <button type="submit" className="btn btn-primary changingcolor1" id="changingcolor">Register</button>
         </form>
         <div className="dropdown-divider"></div>
         <a className="dropdown-item" href="/Register">New around here? Sign up</a>

@@ -81,7 +81,7 @@ const Ideas = () => {
     <>
       <div style={styles.container}>
         <div style={styles.text}>
-          <h1>Ideas for the 21<sup>st</sup> Century Dev</h1>
+          <h1 className="fs-5">Ideas for the 21<sup>st</sup> Century Dev</h1>
           <p>Is it time to think outside the div?</p>
         </div>
         <div className="d-flex justify-content-center" style={styles.imageSpan}>

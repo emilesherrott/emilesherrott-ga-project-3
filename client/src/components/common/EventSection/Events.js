@@ -108,10 +108,10 @@ const Events = () => {
                           <h5 className="card-title fs-6 fw-bolder">Average rating: {item.avgRating}</h5>
                           <p className="card-text taras1">{item.textDescription}</p>
                           <div className="d-grid">
-                            <a href={item.link} className="btn btn-outline-primary btn-lg">See location website</a>
+                            <a href={item.link} className="btn btn-outline-primary btn-lg changingcolor1" id="changingcolor">See location website</a>
                           </div>
                           <p className="d-grid taras2">
-                            <button className="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target={`#id${index}`} aria-expanded="false" aria-controls={`id${index}`}>Comments and rating</button>
+                            <button className="btn btn-outline-primary btn-sm changingcolor1" id="changingcolor" type="button" data-bs-toggle="collapse" data-bs-target={`#id${index}`} aria-expanded="false" aria-controls={`id${index}`}>Comments and rating</button>
                           </p>
                           <div className="row">
                             <div className="col">
