@@ -5,6 +5,7 @@
 //LOGO IMAGE
 
 import React from 'react'
+import { Link } from 'react-router-dom'
 import facebook from '../../assets/footer/facebook.png'
 import instagram from '../../assets/footer/instagram.png'
 import tweeter from '../../assets/footer/tweeter.png'
@@ -117,7 +118,7 @@ const Footer = () => {
                 <p>
 
 
-                  <a href="/maptwo" className="text-reset">Map</a>
+                  <Link to="/mapone" className="text-reset">Map</Link>
 
                 </p>
               </div>
