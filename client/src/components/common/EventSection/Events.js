@@ -153,7 +153,7 @@ const Events = () => {
                             <a href={item.link} className="btn btn-outline-primary btn-lg changingcolor1" id="changingcolor">See location website</a>
                           </div>
                           <p className="d-grid taras2">
-                            <button className="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target={`#id${index}`} aria-expanded="false" aria-controls={`id${index}`} id={item._id} onClick={getId}>Comments and rating</button>
+                            <button className="btn btn-outline-primary btn-sm changingcolor1 card1" type="button" data-bs-toggle="collapse" data-bs-target={`#id${index}`} aria-expanded="false" aria-controls={`id${index}`} id={item._id} onClick={getId}>Comments and rating</button>
                           </p>
                           <div className="row">
                             <div className="col">
