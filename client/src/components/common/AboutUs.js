@@ -14,29 +14,29 @@ const AboutUs = () => {
       <div className="profilecontainer taras4">
         <div className="container marketing taras4">
           <div className="row">
-            <div className="col-lg-3">
+            <div className="col-md-3 mb-5 mt-5">
               <img className="bd-placeholder-img rounded-circle" width="140" height="140" src={cristina}></img>
-              <h2 className="aboutusname">Cristina</h2>
-              <p>Junior full-stack developer</p>
-              <p><a className="btn btn-secondary changingcolor1" id="changingcolor" href="#">View details »</a></p>
+              <h2 className="aboutusname mb-1">Cristina</h2>
+              <p className="mb-2">Junior full-stack developer</p>
+              <p><a className="btn btn-secondary changingcolor2" id="changingcolor1" href="https://www.linkedin.com/in/cristinagrandeit/">View details »</a></p>
             </div>
-            <div className="col-lg-3">
+            <div className="col-md-3 mb-5 mt-5">
               <img className="bd-placeholder-img rounded-circle" width="140" height="140" src={emile}></img>
-              <h2 className="aboutusname">Emile</h2>
-              <p>Junior full-stack developer</p>
-              <p><a className="btn btn-secondary changingcolor1" id="changingcolor" href="#">View details »</a></p>
+              <h2 className="aboutusname mb-1">Emile</h2>
+              <p className="mb-2">Junior full-stack developer</p>
+              <p><a className="btn btn-secondary changingcolor2" id="changingcolor1" href="https://www.linkedin.com/in/emilesherrott/">View details »</a></p>
             </div>
-            <div className="col-lg-3">
+            <div className="col-md-3 mb-5 mt-5">
               <img className="bd-placeholder-img rounded-circle" width="140" height="140" src={sarantis}></img>
-              <h2 className="aboutusname">Sarantis</h2>
-              <p>Junior full-stack developer</p>
-              <p><a className="btn btn-secondary changingcolor1" id="changingcolor" href="#">View details »</a></p>
+              <h2 className="aboutusname mb-1">Sarantis</h2>
+              <p className="mb-2">Junior full-stack developer</p>
+              <p><a className="btn btn-secondary changingcolor2" id="changingcolor1" href="#">View details »</a></p>
             </div>
-            <div className="col-lg-3">
+            <div className="col-md-3 mb-5 mt-5">
               <img className="bd-placeholder-img rounded-circle" width="140" height="140" src={taras}></img>
-              <h2 className="aboutusname">Taras</h2>
-              <p>Junior full-stack developer</p>
-              <p><a className="btn btn-secondary changingcolor1" id="changingcolor" href="#">View details »</a></p>
+              <h2 className="aboutusname mb-1">Taras</h2>
+              <p className="mb-2">Junior full-stack developer</p>
+              <p><a className="btn btn-secondary changingcolor2" id="changingcolor1" href="#">View details »</a></p>
             </div>
           </div>
         </div>

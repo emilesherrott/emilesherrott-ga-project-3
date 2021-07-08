@@ -44,7 +44,7 @@ const Register = () => {
 
   return (
     <div className="row justify-content-center">
-      <div className="col-sm-12 col-md-3">
+      <div className="col-sm-12 col-md-3 mt-5">
         <form className="px-4 py-3" onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="exampleDropdownFormEmail1" className="form-label">Username</label>
@@ -54,15 +54,17 @@ const Register = () => {
               name="username"
               className="form-control"
               id="exampleDropdownFormEmail1.2"
-              placeholder="Username"
+              placeholder="jane.doe"
               value={formdata.username} />
             {errors.username && <p className="text-danger">{errors.username.message}</p>}
+          </div>
+          <div className="mb-3">
             <label htmlFor="exampleDropdownFormEmail1" className="form-label">Email address</label>
             <input
               onChange={handleChange}
               type="email"
               name="email"
-              className="form-control"
+              className="form-control "
               id="exampleDropdownFormEmail1"
               placeholder="email@example.com"
               value={formdata.email}
@@ -71,13 +73,13 @@ const Register = () => {
           </div>
           <div className="mb-3">
             <label htmlFor="exampleDropdownFormPassword1" className="form-label">Password</label>
-            <input onChange={handleChange} type="password" name="password" className="form-control" id="exampleDropdownFormPassword1" placeholder="Password" value={formdata.password}
+            <input onChange={handleChange} type="password" name="password" className="form-control" id="exampleDropdownFormPassword1" placeholder="********" value={formdata.password}
             />
             {errors.password && <p className="alert alert-danger" role="alert">{errors.password.message}</p>}
           </div>
           <div className="mb-3">
             <label htmlFor="exampleDropdownFormPassword1" className="form-label">Password Confirmation</label>
-            <input onChange={handleChange} type="password" name="passwordConfirmation" className="form-control" id="exampleDropdownFormPassword1.1" placeholder="Password Confirmation" value={formdata.passwordConfirmation}
+            <input onChange={handleChange} type="password" name="passwordConfirmation" className="form-control" id="exampleDropdownFormPassword1.1" placeholder="********" value={formdata.passwordConfirmation}
             />
             {errors.passwordConfirmation && <p className="alert alert-danger" role="alert">{errors.passwordConfirmation.message}</p>}
           </div>
@@ -90,7 +92,7 @@ const Register = () => {
           <button type="submit" className="btn btn-primary changingcolor1" id="changingcolor">Register</button>
         </form>
         <div className="dropdown-divider"></div>
-        <a className="dropdown-item" href="/Register">New around here? Sign up</a>
+        <a className="dropdown-item mb-5" href="/Register">New around here? Sign up</a>
         {/* <a className="dropdown-item" href="#">Forgot password?</a> */}
       </div>
     </div>

@@ -172,11 +172,11 @@ const Events = () => {
                                       <div className="form-floating">
                                         <select defaultValue={'DEFAULT'} className="form-select" id="floatingSelect" aria-label="Floating label select example" placeholder="choose your mark" onChange={handleChange} name="rating">
                                           <option value="DEFAULT" disabled>Select from following:</option>
-                                          <option value="1">1 out of 5</option>
-                                          <option value="2">2 out of 5</option>
-                                          <option value="3">3 out of 5</option>
-                                          <option value="4">4 out of 5</option>
-                                          <option value="5">5 out of 5</option>
+                                          <option value="1">1</option>
+                                          <option value="2">2</option>
+                                          <option value="3">3</option>
+                                          <option value="4">4</option>
+                                          <option value="5">5</option>
                                         </select>
                                         {/* {errors && <p className="help is-danger">Please add rating first</p>} */}
                                         {/* {errors.name && <p className="help is-danger">{errors.rating}</p>} */}
@@ -184,12 +184,12 @@ const Events = () => {
                                         <div id="commentRating" className="form-text">Choose your rating.</div>
                                       </div>
                                       <p className="d-grid taras2">
-                                        <button type="submit" className="btn btn-primary btn-sm taras3" id={item._id} onClick={getId}>Add a comment</button>
+                                        <button type="submit" className="btn btn-primary btn-sm taras3 changingcolor1 card1" id={item._id} onClick={getId}>Add a comment</button>
                                         {/* {errors ? <i className="help is-danger">Please leave a rating and comment first</i> : '' } */}
                                       </p>
                                     </form>
                                     :
-                                    <Link to="/login"><button typ="button" className="btn btn-warning taras5">Please login to access comments.</button></Link>
+                                    <Link to="/login"><button typ="button" className="btn btn-warning taras5 changingcolor1 card1">Please login to access comments.</button></Link>
                                   }
                                   <div>{item.comments.map(comment => {
                                     return (
@@ -199,7 +199,7 @@ const Events = () => {
                                             <h5 className="card-title">Rating: {comment.rating} out of 5.</h5>
                                             <p className="card-text">Comment: {comment.text}</p>
                                             <h6 className="card-subtitle mb-2 text-muted taras4">Created at: {comment.createdAt.replace(/T/g, ' ').slice(0, -5)}</h6>
-                                            {userIsOwner(comment.owner) && <a href="" className="card-link" onMouseOver={getCommentId} onClick={deleteComment} id={comment._id}>Delete this comment</a>}
+                                            {userIsOwner(comment.owner) && <a href="" className="card-link changingcolor1 card1" onMouseOver={getCommentId} onClick={deleteComment} id={comment._id}>Delete this comment</a>}
                                           </div>
                                         </div>
                                       </>

@@ -21,13 +21,13 @@ const Home = () => {
   return (
     <>
       {/* _________________________________ */}
-      <div className="row taras2">
+      <div className="row taras2 mb-5">
         <div className="col align-self-center">
           <div className="container">
             <div className="card border rounded">
               <div className="card-body">
-                <h3 className="card-title text-center">Reimagine your workspace</h3>
-                <p className="card-text text-center">Find some good spaces to work across the globe or close to you:</p>
+                <h3 className="card-title text-center boldtext">Reimagine your workspace</h3>
+                <p className="card-text text-center boldtext">Find some good spaces to work across the globe or close to you:</p>
                 <div className="d-grid">
                   <Link to="/indexandmap" type="button" className="btn btn-outline-primary btn-lg changingcolor1 taras3" id="changingcolor">Start</Link>
                 </div>
@@ -64,8 +64,8 @@ const Home = () => {
       {/* _________________________________ */}
       {/* _________________________________ */}
       <div className="container">
-        <div className="row align-items-center">
-          <div className="col taras1">
+        <div className="row align-items-center mb-5">
+          <div className="col-sm-12 col-md-3 taras1">
             <div className="container">
               <div className="card border rounded ">
                 <Link to="/indexandmap" type="button" className="btn btn-outline-secondary box-shadow changingcolor2 card1">
@@ -77,7 +77,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="col taras1">
+          <div className="col-sm-12 col-md-3 taras1">
             <div className="container">
               <div className="card border rounded">
                 <Link to="/indexandmap"type="button" className="btn btn-outline-secondary box-shadow changingcolor2" id="changingcolor">
@@ -89,7 +89,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="col taras1">
+          <div className="col-sm-12 col-md-3 taras1">
             <div className="container">
               <div className="card border rounded">
                 <Link to="/indexandmap" type="button" className="btn btn-outline-secondary box-shadow changingcolor2" id="changingcolor">
@@ -101,7 +101,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="col taras1">
+          <div className="col-sm-12 col-md-3 taras1">
             <div className="container">
               <div className="card border rounded">
                 <a href="/events" type="button" className="btn btn-outline-secondary box-shadow changingcolor2" id="changingcolor">
@@ -118,12 +118,12 @@ const Home = () => {
       {/* _________________________________ */}
       <div className="width: 100%">
         <div className="row align-items-center" id="containercarousel">
-          <div className="col">
+          <div className="col-sm-12 col-md-6">
             <div className="container-fluid">
               <h1 className="align-items-center text-center blockquote mb-0">Find your space with Workspace!</h1>
             </div>
           </div>
-          <div className="col-6">
+          <div className="col-sm-12 col-md-6">
             <div className="container" id="containercarouselright">
               <div id="carouselExampleDark" className="carousel carousel-dark slide" data-bs-ride="carousel">
                 <div className="carousel-indicators">

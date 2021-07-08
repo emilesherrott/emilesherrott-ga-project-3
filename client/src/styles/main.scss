@@ -2,6 +2,7 @@
   font-family: 'Noto Sans', sans-serif;
 }
 
+
 // #222222 TEXT COLOR TO ADD
 
 #changingcolor{  //BUTTONS
@@ -58,7 +59,10 @@
 height: 35%;
 width: 35%;
 }
-
+.boldtext{
+  font-weight: bolder;
+  color: #222222;
+}
 #containercarousel {
   background-color: #ff385c;
   color: white;
@@ -87,7 +91,9 @@ width: 35%;
   font-style: oblique;
   font-size: 21px;
 }
-
+#cursor {
+  cursor: pointer;
+}
 .taras1 {
   padding-bottom: 20px;
 }

@@ -46,7 +46,7 @@ const Login = () => {
         <ToastContainer />
       </div>
       <div className="row justify-content-center">
-        <div className="col-sm-12 col-md-3">
+        <div className="col-sm-12 col-md-3 p-5">
           <form className="px-4 py-3" onSubmit={handleSubmit}>
             <div className="mb-3">
               <label htmlFor="exampleDropdownFormEmail1" className="form-label">Email address</label>
@@ -60,7 +60,7 @@ const Login = () => {
             </div>
             <div className="mb-3">
               <label htmlFor="exampleDropdownFormPassword1" className="form-label">Password</label>
-              <input onChange={handleChange} type="password" name="password" className="form-control" id="exampleDropdownFormPassword1" placeholder="Password" value={formdata.password} />
+              <input onChange={handleChange} type="password" name="password" className="form-control" id="exampleDropdownFormPassword1" placeholder="********" value={formdata.password} />
             </div>
             <div className="mb-3">
               <div className="form-check">
