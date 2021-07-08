@@ -5,10 +5,10 @@
 //LOGO IMAGE
 
 import React from 'react'
-import facebook from '../../assets/footer/facebook.png'
-import instagram from '../../assets/footer/instagram.png'
-import tweeter from '../../assets/footer/tweeter.png'
-import linkedin from '../../assets/footer/linkedin.jpg'
+import facebook from '../../assets/footer/facebook.svg'
+import instagram from '../../assets/footer/instagramsvg.svg'
+import tweeter from '../../assets/footer/twittersvg.png'
+import linkedin from '../../assets/footer/linkedinsvg.png'
 // import { Link } from 'react-router-dom'
 
 
@@ -33,20 +33,19 @@ const Footer = () => {
 
           <div>
             <a href="" className="me-4 text-reset">
-              <i className="fab fa-facebook-f"></i>
-              <img src={facebook} width="40px" height="40px"></img>
+              <img src={facebook} width="36" height="36" fill="currentColor" className="bi bi-facebook" viewBox="0 0 16 16"></img>
             </a>
             <a href="" className="me-4 text-reset">
               <i className="fab fa-linkedin"></i>
-              <img src={linkedin} width="65px" height="65px"></img>
+              <img src={linkedin} width="36px" height="36px"></img>
             </a>
             <a href="" className="me-4 text-reset">
               <i className="fab fa-twitter"></i>
-              <img src={tweeter} width="50px" height="50px"></img>
+              <img src={tweeter} width="36px" height="36px"></img>
             </a>
             <a href="" className="me-4 text-reset">
               <i className="fab fa-instagram"></i>
-              <img src={instagram} width="60px" height="45px"></img>
+              <img src={instagram} width="36px" height="36px"></img>
             </a>
 
           </div>
@@ -66,7 +65,7 @@ const Footer = () => {
                   Company
                 </h6>
                 <p>
-                  <a href="#!" className="text-reset">Global Locations</a>
+                  <a href="/AboutUs" className="text-reset">ABOUT US</a>
                 </p>
                 <p>
                   <a href="#!" className="text-reset">Mission</a>

@@ -1,0 +1,96 @@
+import React from 'react'
+import newyork from '../../assets/about_us/newyork.jpeg'
+import london from '../../assets/about_us/london.jpeg'
+import lisbon from '../../assets/about_us/lisbon.jpeg'
+import cristina from '../../assets/about_us/home_cristina.jpeg'
+import emile from '../../assets/about_us/home_emile.png'
+import sarantis from '../../assets/about_us/home_sarantis.jpeg'
+import taras from '../../assets/about_us/home_taras.jpeg'
+
+const AboutUs = () => {
+
+  return (
+    <>
+      <div className="profilecontainer taras4">
+        <div className="container marketing taras4">
+          <div className="row">
+            <div className="col-lg-3">
+              <img className="bd-placeholder-img rounded-circle" width="140" height="140" src={cristina}></img>
+              <h2 className="aboutusname">Cristina</h2>
+              <p>Junior full-stack developer</p>
+              <p><a className="btn btn-secondary changingcolor1" id="changingcolor" href="#">View details »</a></p>
+            </div>
+            <div className="col-lg-3">
+              <img className="bd-placeholder-img rounded-circle" width="140" height="140" src={emile}></img>
+              <h2 className="aboutusname">Emile</h2>
+              <p>Junior full-stack developer</p>
+              <p><a className="btn btn-secondary changingcolor1" id="changingcolor" href="#">View details »</a></p>
+            </div>
+            <div className="col-lg-3">
+              <img className="bd-placeholder-img rounded-circle" width="140" height="140" src={sarantis}></img>
+              <h2 className="aboutusname">Sarantis</h2>
+              <p>Junior full-stack developer</p>
+              <p><a className="btn btn-secondary changingcolor1" id="changingcolor" href="#">View details »</a></p>
+            </div>
+            <div className="col-lg-3">
+              <img className="bd-placeholder-img rounded-circle" width="140" height="140" src={taras}></img>
+              <h2 className="aboutusname">Taras</h2>
+              <p>Junior full-stack developer</p>
+              <p><a className="btn btn-secondary changingcolor1" id="changingcolor" href="#">View details »</a></p>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div id="myCarousel" className="carousel slide" data-bs-ride="carousel">
+          <div className="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" className="" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" className="active" aria-current="true"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" className=""></button>
+          </div>
+          <div className="carousel-inner">
+            <div className="carousel-item">
+              <img src={london} className=" d-block w-100" alt="stories" height="60%" />
+              <div className="container">
+                <div className="carousel-caption text-start">
+                  <h1>Example headline.</h1>
+                  <p>Some representative placeholder content for the first slide of the carousel.</p>
+                  <p><a className="btn btn-lg btn-primary changingcolor2" id="changingcolor1" href="/login">Sign up today</a></p>
+                </div>
+              </div>
+            </div>
+            <div className="carousel-item active">
+              <img src={newyork} className=" d-block w-100" alt="stories" height="60%" />
+              <div className="container">
+                <div className="carousel-caption">
+                  <h1>Another example headline.</h1>
+                  <p>Some representative placeholder content for the second slide of the carousel.</p>
+                  <p><a className="btn btn-lg btn-primary changingcolor2" id="changingcolor1" href="/">Learn more</a></p>
+                </div>
+              </div>
+            </div>
+            <div className="carousel-item">
+              <img src={lisbon} className=" d-block w-100" alt="stories" height="60%" />
+              <div className="container">
+                <div className="carousel-caption text-end">
+                  <h1>One more for good measure.</h1>
+                  <p>Some representative placeholder content for the third slide of this carousel.</p>
+                  <p><a className="btn btn-lg btn-primary changingcolor2" id="changingcolor1" href="#">Browse gallery</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button className="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button className="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default AboutUs
