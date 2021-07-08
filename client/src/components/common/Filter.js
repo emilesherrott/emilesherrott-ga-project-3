@@ -3,80 +3,81 @@ import axios from 'axios'
 
 
 const Filter = () => {
-  const [filtered,setfiltered] = useState([])
   const [workspaces, setWorkspaces] = useState([])
+  // console.log(workspaces)
+
   useEffect(() => {
     const getData = async () => {
       const { data } = await axios.get('/api/workspaces')
       setWorkspaces(data)
+      // console.log(data)
     }
     getData()
-  },[])
+  }, [])
 
-  
-  function handleCity (event) {
-    if (event.target.value === 'London') {
-      setfiltered(workspaces.filter(iter => iter.city === 'London')) 
-    } else if (event.target.value === 'Vilnius'){
-      setfiltered(workspaces.filter(iter => iter.city === 'Vilnius'))
-    } else if (event.target.value === 'Kaunas'){
-      setfiltered(workspaces.filter(iter => iter.city === 'Kaunas'))
-    } else if (event.target.value === 'All') {
-      setfiltered(workspaces)
-    }
+  const [filteredWorkspaces, setFilteredworkspaces] = useState([])
+
+  const handleFilter = (event) => {
+    const filteredworkspacesArray = workspaces.filter(item => {
+      return item.city === event.target.value
+    })
+    setFilteredworkspaces(filteredworkspacesArray)
   }
 
-  function handleCountry() {
-    console.log('this shit works')
-    if (event.target.value === 'Lithuania') {
-      setfiltered(workspaces.filter(iter => iter.country === 'Lithuania')) 
-    } else if (event.target.value === 'United Kingdom'){
-      setfiltered(workspaces.filter(iter => iter.country === 'United Kingdom'))
+  const uniquecity = []
+
+  workspaces.map(item => {
+    if (uniquecity.indexOf(item.city) === -1) {
+      uniquecity.push(item.city)
     }
+  })
+  // console.log(uniquecity)
+
+  const [search, setSearch] = useState('')
+  const handleSearch = (event) => {
+    setSearch(event.target.value)
   }
-  
-  
 
   return (
     <>
-
-      <label >Choose a Country:</label>
-      <select name="countries-sa" id="countries-sa" onChange={handleCountry}>
-        <option value="All">All</option>
-        <option value="United Kingdom">United Kingdom</option>
-        <option value="Lithuania">Lithuania</option>
+      <select className="dropdown" onChange={handleFilter}>{uniquecity.map((item) => {
+        if (item === '') {
+          return <option key='none' value=''>Other</option>
+        } else {
+          return (
+            <>
+              <option key={item.index} value={item}>{item}</option>
+            </>
+          )
+        }
+      })}
+      <option key='last' value="All">All</option>
       </select>
-      
-      <label >Choose a city:</label>
-      <select name="cities-sa" id="cities-sa" onChange={handleCity}>
-        <option value="All">All</option>
-        <option value="London">London</option>
-        <option value="Vilnius">Vilnius</option>
-        <option value="Kaunas">Kaunas</option>
-      </select>
-      
-      {filtered.map(item => {
-        return (
-          <>
-            <div className="col-sm-6 taras2">
-              <div className="card">
-                <figure className="image is-3by2">
-                  <img src={item.image} className="card-img-top figure-img" alt={item.name} />
-                </figure>
-                <div className="card-body">
-                  <h5 className="card-title fs-5 fw-bolder ">{item.name}</h5>
-                  <p className="card-text taras1">{item.textDescription}</p>
-                  <div className="d-grid">
-                    <a href={item.link} className="btn btn-outline-primary btn-lg">See location website</a>
+      <input className="searchbar" type="text" placeholder="Search for a place" onChange={handleSearch} />
+      <ul onChange={handleSearch}>{(filteredWorkspaces.length > 0 ? filteredWorkspaces : workspaces).map((item,index) => {
+        if (item.name.toLowerCase().includes(search.toLowerCase())) {
+          return (  
+            <>
+              <div className="SA-display">
+                <div key="index" className="card">
+                  <img src={item.image} className="card-img-top" alt="..."></img>
+                  <div className="card-body">
+                    <h5 className="card-title">{item.name}</h5>
+                    <p className="card-text">{item.textDescription}</p>
+                    <p className="d-grid taras2">
+                      <button className="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target={`#id${index}`} aria-expanded="false" aria-controls={`id${index}`}>Comments and rating</button>
+                    </p>
+                    <div className="d-grid">
+                      <a href={item.link} className="btn btn-outline-primary btn-lg">See location website</a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </>
-        )
+            </>
+          ) 
+        }
       })}
-      
-      
+      </ul>
     </>
   )
 }
@@ -84,7 +85,4 @@ export default Filter
 
 
 
-
-
-// {workspaces.map(iter => <h1 key={iter._id}>{iter.name} & {iter.city}</h1>)}
 

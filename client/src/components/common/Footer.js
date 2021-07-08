@@ -9,6 +9,11 @@ import facebook from '../../assets/footer/facebook.svg'
 import instagram from '../../assets/footer/instagramsvg.svg'
 import tweeter from '../../assets/footer/twittersvg.png'
 import linkedin from '../../assets/footer/linkedinsvg.png'
+import { Link } from 'react-router-dom'
+// import facebook from '../../assets/footer/facebook.png'
+// import instagram from '../../assets/footer/instagram.png'
+// import tweeter from '../../assets/footer/tweeter.png'
+// import linkedin from '../../assets/footer/linkedin.png'
 // import { Link } from 'react-router-dom'
 
 
@@ -47,6 +52,22 @@ const Footer = () => {
               <i className="fab fa-instagram"></i>
               <img src={instagram} width="36px" height="36px"></img>
             </a>
+            {/* <a>
+              <i className="fab fa-facebook-f "></i>
+              <img src={facebook} width="40px" height="40px"></img>
+            </a>
+            <a href="" className="me-4 text-reset">
+              <i className="fab fa-linkedin"></i>
+              <img src={linkedin} width="48px" height="48px"></img>
+            </a>
+            <a href="" className="me-4 text-reset">
+              <i className="fab fa-twitter"></i>
+              <img src={tweeter} width="48px" height="48px"></img>
+            </a>
+            <a href="" className="me-4 text-reset">
+              <i className="fab fa-instagram"></i>
+              <img src={instagram} width="42px" height="48px"></img>
+            </a> */}
 
           </div>
 
@@ -116,7 +137,7 @@ const Footer = () => {
                 <p>
 
 
-                  <a href="/maptwo" className="text-reset">Map</a>
+                  <Link to="/mapone" className="text-reset">Map</Link>
 
                 </p>
               </div>

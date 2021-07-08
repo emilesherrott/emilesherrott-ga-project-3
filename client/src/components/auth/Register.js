@@ -16,7 +16,7 @@ const Register = () => {
     email: '',
     password: '',
     passwordConfirmation: '',
-  })
+  },[])
 
 
 
