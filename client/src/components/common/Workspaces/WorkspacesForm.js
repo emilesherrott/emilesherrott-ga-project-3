@@ -23,9 +23,10 @@ const WorkspacesForm = ({
                 placeholder="Name"
                 name="name"
                 onChange={handleChange}
-                value={formData.name} />
+                value={formData.name} 
+                required/>
             </div>
-            {errors.name && <p> {errors.name.message}</p>}
+            {/* {errors.name && <p> {errors.name.message}</p>} */}
           </div>
 
           <div className="emile-start mb-4">
