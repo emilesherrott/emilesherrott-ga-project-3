@@ -13,8 +13,8 @@ const DisplayIndexAndMap = ({ myData, filteredData }) => {
     <>
       {(filteredData.length ? filteredData : myData).map((item, index) => {
         return (
-          <div key={index}>
-            <div className="col-sm-12 taras2" id={item._id} style={styles.imageTile}>
+          <>
+            <div className="col-sm-12 col-md-3 mb-5" key={index} id={item._id} style={styles.imageTile}>
               <div className="card">
                 <figure className="image is-3by2">
                   <img src={item.image} className="card-img-top figure-img" alt={item.name} />
@@ -25,7 +25,8 @@ const DisplayIndexAndMap = ({ myData, filteredData }) => {
                 </div>
               </div>
             </div>
-          </div>
+
+          </>
         )
       })}
     </>

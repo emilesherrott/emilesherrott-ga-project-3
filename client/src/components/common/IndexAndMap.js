@@ -57,7 +57,7 @@ const IndexAndMap = () => {
       height: '80vh',
     }, colMap: {
       height: '80vh',
-      paddingLeft: '6.8vw',
+      // paddingLeft: '6.8vw',
     },
   }
 
@@ -66,12 +66,12 @@ const IndexAndMap = () => {
       <FilterIndexAndMap
         handleTextFilter={handleTextFilter} />
       <div className="row" style={styles.row}>
-        <div className="col-6" style={styles.colImage}>
+        <div className="col-sm-12 col-md-3" style={styles.colImage}>
           <DisplayIndexAndMap
             myData={myData}
             filteredData={filteredData} />
         </div>
-        <div className="col-6" style={styles.colMap}>
+        <div className="col-sm-12 col-md-9" style={styles.colMap}>
           <MapTwo
             filteredData={filteredData}
             myData={myData} />          
@@ -82,3 +82,4 @@ const IndexAndMap = () => {
 }
 
 export default IndexAndMap
+

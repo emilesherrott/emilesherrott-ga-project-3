@@ -2,6 +2,7 @@
   font-family: 'Noto Sans', sans-serif;
 }
 
+
 // #222222 TEXT COLOR TO ADD
 
 #changingcolor{  //BUTTONS
@@ -10,6 +11,20 @@
   border-color: #ff385c;
   font-weight: bolder;
 }
+
+#changingcolor1{  //BUTTONS ABOUT US
+  background-color: #ff385c;
+  color: white;
+  border-color: #ff385c;
+  font-weight: bolder;
+}
+
+.changingcolor2:hover{ //BUTTONS HOVER 
+  background-color: white !important;
+  color: #ff385c !important;
+  font-weight: bolder;
+}
+
 .box-shadow:hover{ //CARD SHADOW - HOME
   box-shadow:  0px 0px 16px 5px #ff385c!important;
 }
@@ -33,11 +48,21 @@
 //   font-weight: bolder;
 // }
 
+.aboutusname {
+  color: #ff385c;
+  font-weight: bolder;
+  font-size: 28 !important;
+  margin-top: 5%;
+}
+
 #mainlogo{
 height: 35%;
 width: 35%;
 }
-
+.boldtext{
+  font-weight: bolder;
+  color: #222222;
+}
 #containercarousel {
   background-color: #ff385c;
   color: white;
@@ -66,7 +91,9 @@ width: 35%;
   font-style: oblique;
   font-size: 21px;
 }
-
+#cursor {
+  cursor: pointer;
+}
 .taras1 {
   padding-bottom: 20px;
 }
@@ -102,11 +129,11 @@ width: 35%;
 .me-4 text-reset{
     width: 20px;
     height:20px;
-    background-color: red;
+    background-color:#ff385c;
 }
 
 .container text-center text-md-start mt-5{
-    background-color: red;
+    background-color: #ff385c;
 }
 
 .home {
@@ -115,12 +142,17 @@ width: 35%;
     align-items: center;
     flex-grow: 1;
     .title {
-      background-color: red;
+      background-color: #ff385c;
       color: white;
       padding: 1rem;
       transform: skewX(-10deg);
       font-size: 2.5rem;
     }
+  }
+
+  .form-check-input:checked{
+    background-color: #ff385c;
+    border-color: #ff385c;
   }
   
   .navbar {
@@ -190,6 +222,14 @@ width: 35%;
 
 
 
+
+
+
+
+#cities-sa, #countries-sa{
+  background-color: #ff385c;
+  size: 50px;
+}
 .SA-display{
   max-width: 1000px;
   align-content: center;

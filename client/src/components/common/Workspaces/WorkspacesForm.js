@@ -8,12 +8,12 @@ const WorkspacesForm = ({
   text = 'Submit',
 }) => {
   return (
-    <div className="row justify-content-center">
+    <div className="row justify-content-center taras4 mt-5">
       <form
         className="col-6"
         onSubmit={handleSubmit}>
         <div className="form-group">
-          <div className="emile-start">
+          <div className="emile-start mb-4">
             <label htmlFor="name" className="">Name</label>
             <div className="">
               <input
@@ -28,7 +28,7 @@ const WorkspacesForm = ({
             {errors.name && <p> {errors.name.message}</p>}
           </div>
 
-          <div className="emile-start">
+          <div className="emile-start mb-4">
             <label htmlFor="address" className="">Address</label>
             <div className="">
               <input
@@ -43,7 +43,7 @@ const WorkspacesForm = ({
             {errors.name && <p> {errors.address.message}</p>}
           </div>
 
-          <div className="emile-start">
+          <div className="emile-start mb-4">
             <label htmlFor="city" className="">City</label>
             <div className="">
               <input
@@ -58,7 +58,7 @@ const WorkspacesForm = ({
             {errors.name && <p> {errors.city.message}</p>}
           </div>
 
-          <div className="emile-start">
+          <div className="emile-start mb-4">
             <label htmlFor="postcode" className="">Post Code</label>
             <div className="">
               <input
@@ -73,7 +73,7 @@ const WorkspacesForm = ({
             {errors.name && <p> {errors.postcode.message}</p>}
           </div>
 
-          <div className="emile-start">
+          <div className="emile-start mb-4">
             <label htmlFor="country" className="">Country</label>
             <div className="">
               <input
@@ -88,7 +88,7 @@ const WorkspacesForm = ({
             {errors.name && <p> {errors.country.message}</p>}
           </div>
 
-          <div className="emile-start">
+          <div className="emile-start mb-4">
             <label htmlFor="phoneNumber" className="">Phone Number</label>
             <div className="">
               <input
@@ -103,7 +103,7 @@ const WorkspacesForm = ({
             {errors.name && <p> {errors.phoneNumber.message}</p>}
           </div>
 
-          <div className="emile-start">
+          <div className="emile-start mb-4">
             <label htmlFor="long" className="">Longitude</label>
             <div className="">
               <input
@@ -118,7 +118,7 @@ const WorkspacesForm = ({
             {errors.name && <p> {errors.long.message}</p>}
           </div>
 
-          <div className="emile-start">
+          <div className="emile-start mb-4">
             <label htmlFor="lat" className="">Latitude</label>
             <div className="">
               <input
@@ -133,7 +133,7 @@ const WorkspacesForm = ({
             {errors.name && <p> {errors.lat.message}</p>}
           </div>
 
-          <div className="emile-start">
+          <div className="emile-start mb-4">
             <label htmlFor="link" className="">Link</label>
             <div className="">
               <input
@@ -148,7 +148,7 @@ const WorkspacesForm = ({
             {errors.name && <p> {errors.link.message}</p>}
           </div>
 
-          <div className="emile-start">
+          <div className="emile-start mb-4">
             <label htmlFor="image" className="">Image</label>
             <div className="">
               <input
@@ -180,7 +180,7 @@ const WorkspacesForm = ({
           </div>
 
 
-          <div className="emile-start">
+          <div className="emile-start mb-5">
             <label className=""></label>
             <div className="">
               <input

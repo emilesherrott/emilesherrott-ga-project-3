@@ -15,6 +15,7 @@ import Filter from './components/common/Filter'
 import IndexAndMap from './components/common/IndexAndMap'
 
 import WorkspacesNew from './components/common/Workspaces/WorkspacesNew'
+import AboutUs from './components/common/AboutUs'
 const App = () => {
   return (
     <Router>
@@ -29,7 +30,7 @@ const App = () => {
         <Route exact path='/mapone' component={MapOne} />
         <Route exact path='/maptwo' component={MapTwo} />
         <Route exact path='/filter' component={Filter} />
-        {/* <Route exact path='/' component={Footer} /> */}
+        <Route exact path='/aboutus' component={AboutUs} />
         <Route exact path='/contactform' component={ContactForm} />
         <Route exact path='/indexandmap' component={IndexAndMap} />
       </Switch>

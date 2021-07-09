@@ -29,23 +29,23 @@ const Nav = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link to="/ideas" className="nav-link active" aria-current="page">21<sup>st</sup> IDEAS</Link>
+              <Link to="/ideas" className="nav-link active boldtext" aria-current="page">21<sup>st</sup> IDEAS</Link>
             </li>
           </ul>
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link to="/contact-us" className="nav-link">CONTACT US</Link>
+              <Link to="/contact-us" className="nav-link boldtext">CONTACT US</Link>
             </li>
             <li className="nav-item">
-              <Link to="/workspaces/new" className="nav-link">REGISTER A WORKSPACE </Link>
+              <Link to="/workspaces/new" className="nav-link boldtext">REGISTER A WORKSPACE </Link>
             </li>
             {!userIsAuthenticated() ?
               <li className="nav-item">
-                <Link to="/login" className="nav-link">LOGIN</Link>
+                <Link to="/login" className="nav-link boldtext">LOGIN</Link>
               </li>
               :
               <li className="nav-item">
-                <span onClick={handleLogout} className="nav-link">LOG OUT</span>
+                <span onClick={handleLogout} className="nav-link boldtext" id="cursor">LOG OUT</span>
               </li>
             }
 

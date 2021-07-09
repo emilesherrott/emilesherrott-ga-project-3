@@ -35,7 +35,7 @@ const MapTwo = ({ myData, filteredData }) => {
         <ReactMapGL
           mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
           height='80vh'
-          width='80vh'
+          width='143,2vh'
           mapStyle='mapbox://styles/mapbox/streets-v11'
           {...viewport}
           //   latitude={-51.550320}
