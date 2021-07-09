@@ -129,11 +129,11 @@ width: 35%;
 .me-4 text-reset{
     width: 20px;
     height:20px;
-    background-color: red;
+    background-color:#ff385c;
 }
 
 .container text-center text-md-start mt-5{
-    background-color: red;
+    background-color: #ff385c;
 }
 
 .home {
@@ -142,12 +142,17 @@ width: 35%;
     align-items: center;
     flex-grow: 1;
     .title {
-      background-color: red;
+      background-color: #ff385c;
       color: white;
       padding: 1rem;
       transform: skewX(-10deg);
       font-size: 2.5rem;
     }
+  }
+
+  .form-check-input:checked{
+    background-color: #ff385c;
+    border-color: #ff385c;
   }
   
   .navbar {

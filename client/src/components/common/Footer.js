@@ -73,10 +73,7 @@ const Footer = () => {
                   Impact
                 </h6>
                 <p>
-                  <a href="/filter" className="text-reset fw-bold">Filter</a>
-                </p>
-                <p>
-                  <Link to="/mapone" className="text-reset fw-bold">Map</Link>
+                  <Link to="/indexandmap" className="text-reset fw-bold">Map</Link>
                 </p>
               </div>
             </div>

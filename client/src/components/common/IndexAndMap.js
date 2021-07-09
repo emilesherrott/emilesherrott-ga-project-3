@@ -82,3 +82,4 @@ const IndexAndMap = () => {
 }
 
 export default IndexAndMap
+
