@@ -1,26 +1,26 @@
-import express from 'express' //! 1.0 import express
-import mongoose from 'mongoose' //! 2.0 import mongoose
-import { port, dbURI } from './config/environment.js' //! 3.0 create environment component 
+import express from 'express'
+import mongoose from 'mongoose' 
+import { port, dbURI } from './config/environment.js' 
 // import connectToDatabase from  './lib/connectToDb.js'
 // import logger from './lib/logger.js'
-import router from './config/router.js' //! 10
+import router from './config/router.js' 
 // import errorHandler from './lib/errorHandler.js'
 import path from 'path'
 
 
 
-const app = express() //! 4.0 create express app
+const app = express() 
 
 const __dirname = path.resolve()
 
 
-const startServer = async () => { //! 5.0 get server running
+const startServer = async () => { 
 
   try {
     await mongoose.connect(dbURI, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })
-    console.log('DATABASE IS CONNECTED SUCESSFULLY') //! 6.0 connect mongoose to DB and log it
+    console.log('DATABASE IS CONNECTED SUCESSFULLY') 
 
-    app.use((req, _res, next) => { //! 7.0 logger of request method and url of direction it goes to
+    app.use((req, _res, next) => {
       console.log(` ICOMING REQUEST: METHOD: ${req.method}, URL IS: ${req.url}`)
       next()
     })
@@ -37,7 +37,7 @@ const startServer = async () => { //! 5.0 get server running
 
     // app.use(errorHandler)
 
-    app.listen(port, () => console.log(`EXPRESS IS RUNNING ON PORT ${port}`)) //! 9.0 
+    app.listen(port, () => console.log(`EXPRESS IS RUNNING ON PORT ${port}`)) 
   } catch (error) {
     console.log(error)
     console.log('something has gone wrong')
