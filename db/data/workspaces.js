@@ -288,7 +288,7 @@ export default [
     phoneNumber: +17328652856,
     long: '-73.987968',
     lat: '40.759769',
-    link: 'https://uncommon.co.uk/location/highbury-lslington/',
+    link: 'https://yourstudio.com/locations/11-west-42/',
     image: 'https://yourstudio.com/wp-content/uploads/2021/01/Entryway-830x552.jpg',
     textDescription: 'Studio at 11 West 42nd Street is in the middle of just about everything the midtown Manhattan has to offer. You`ll find spectacular views of Bryant Park and the iconic New York Public Library, and you`re just a short walk to Times Square and Grand Central. Inside, enjoy light-filled workspaces and details dating to the building`s 1920s origins.',
     facilities: ''
@@ -318,7 +318,7 @@ export default [
     lat: '37.790379',
     link: 'https://www.galvanize.com/campuses/coworking-space-san-francisco',
     image: 'https://runway.is/wp-content/uploads/2021/01/3_Galvanize-1024x667.png',
-    textDescription: 'With its open loft setup, strong community, and active event calendar, The Farm Soho is New York`s go-to coworking space for entrepreneurs, early-stage startups, and freelancers who want to be immersed in a dynamic environment.',
+    textDescription: 'The Farm Soho is New York`s go-to coworking space for entrepreneurs, early-stage startups, and freelancers who want to be immersed in a dynamic environment.',
     facilities: ''
   },
   {
@@ -346,7 +346,7 @@ export default [
     lat: '48.836040',
     link: 'https://www.wework.com/en-GB/buildings/198-avenue-de-france--paris',
     image: 'https://www.wework.com/ideas/wp-content/uploads/sites/4/2019/08/Web_72DPI-20190718_WeWork_4-Rue-Jules-Lefebvre_006-1120x630.jpg',
-    textDescription: 'Art, beauty, and culture abound in Paris, a captivating city unlike any other. The city of lights is a top destination to visit, live in, and—following the introduction of business-friendly policies from the Macron administration—it`s also an ideal location for starting or expanding a company.',
+    textDescription: 'The city of lights is a top destination to visit, live in, and—following the introduction of business-friendly policies from the Macron administration—it`s also an ideal location for starting or expanding a company.',
     facilities: ''
   },
   {
@@ -358,8 +358,8 @@ export default [
     phoneNumber: '+33182884768',
     long: '2.321100',
     lat: '48.878440',
-    link: 'https://www.wework.com/en-GB/buildings/198-avenue-de-france--paris',
-    image: 'https://www.wework.com/ideas/wp-content/uploads/sites/4/2019/08/Web_72DPI-20190718_WeWork_4-Rue-Jules-Lefebvre_006-1120x630.jpg',
+    link: 'https://www.wework.com/en-GB/buildings/7-rue-de-madrid--paris',
+    image: 'https://locations-api-production.imgix.net/locations/image/c4904c10-9189-11eb-8f67-0e6a5dc689cd/Web_150DPI-20210308_WeWork_Rue_de_Madrid_-_Paris_015.jpg?auto=format%20compress&fit=crop&q=50&w=900&h=506',
     textDescription: 'Art, beauty, and culture abound in Paris, a captivating city unlike any other. The city of lights is a top destination to visit, live in, and—following the introduction of business-friendly policies from the Macron administration—it`s also an ideal location for starting or expanding a company.',
     facilities: ''
   },
@@ -388,7 +388,7 @@ export default [
     lat: '2.1918802',
     link: 'https://loom.es/loom-glories/',
     image: 'https://loom.es/wp-content/uploads/2020/07/1-4-1.jpg',
-    textDescription: 'An oasis of peace in the heart of Madrid, this is our LOOM Tapices, with 3,000m2 of gardens and 800m2 of parking spaces to enjoy your outdoor space while you work.',
+    textDescription: 'An oasis of peace in the heart of Barcelona, this is our LOOM Tapices, with 3,000m2 of gardens and 800m2 of parking spaces to enjoy your outdoor space while you work.',
     facilities: ''
   }
 ]
