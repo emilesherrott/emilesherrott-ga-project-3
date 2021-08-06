@@ -1,12 +1,17 @@
 import express from 'express' //! 1.0 import express
 import mongoose from 'mongoose' //! 2.0 import mongoose
 import { port, dbURI } from './config/environment.js' //! 3.0 create environment component 
+// import connectToDatabase from  './lib/connectToDb.js'
+// import logger from './lib/logger.js'
 import router from './config/router.js' //! 10
+// import errorHandler from './lib/errorHandler.js'
+import path from 'path'
 
 
 
 const app = express() //! 4.0 create express app
 
+const __dirname = path.resolve()
 
 
 const startServer = async () => { //! 5.0 get server running
@@ -20,17 +25,17 @@ const startServer = async () => { //! 5.0 get server running
       next()
     })
 
-    //!dont forget json to js
+    app.use(express.static(`${__dirname}/client/build`))
+
     app.use(express.json())
 
-    // middleware for the router
-    // app.use('/api', router)
+    // app.use(logger)
 
-    
     app.use('/api', router)
-    app.use(express.json()) //! 8.0 attaching body 
 
-    // app.use(router) //! 10.0
+    app.use('/*', (_, res) => res.sendFile(`${__dirname}/client/build/index.html`))
+
+    // app.use(errorHandler)
 
     app.listen(port, () => console.log(`EXPRESS IS RUNNING ON PORT ${port}`)) //! 9.0 
   } catch (error) {

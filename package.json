@@ -2,20 +2,23 @@
   "name": "name-test",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:TarasKiricenko/name-test.git",
-  "author": "Taras Kiricenko <taras.kiricenko@gmail.com>",
+  "repository": "git@github.com:emilesherrott/emilesherrott-ga-project-3.git",
+  "author": "Emile Sherrott <emilesherrott@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.13.2",
+    "mongoose": "^5.13.5",
     "yarn": "^1.22.10"
   },
   "type": "module",
   "scripts": {
-    "serve": "npx nodemon index.js",
-    "seed": "node db/seeds.js"
+    "seed": "node db/seeds.js",
+    "serve": "node index.js",
+    "dev": "npx nodemon",
+    "build": "cd client && yarn && yarn build"
   },
   "devDependencies": {
     "nodemon": "^2.0.9"
