@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-// import { useHistory } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 
 const Register = () => {
-  // const history = useHistory()
   const [formdata, setFormdata] = useState({
     username: '',
     email: '',
@@ -21,7 +19,6 @@ const Register = () => {
   }, [])
 
   const notify = () => toast.success('Thank you for registering!', { autoClose: 3000 })
-  // const notifyError = () => toast.error('Your email or password is not correct!', { autoClose: 3000 })
 
   const handleChange = (event) => {
     const newFormData = { ...formdata, [event.target.name]: event.target.value }

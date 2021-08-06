@@ -358,8 +358,8 @@ export default [
     phoneNumber: '+33182884768',
     long: '2.321100',
     lat: '48.878440',
-    link: 'https://www.wework.com/l/office-space/madrid',
-    image: 'https://www.wework.com/en-GB/buildings/7-rue-de-madrid--paris',
+    link: 'https://www.wework.com/en-GB/buildings/7-rue-de-madrid--paris',
+    image: 'https://locations-api-production.imgix.net/locations/image/c4904c10-9189-11eb-8f67-0e6a5dc689cd/Web_150DPI-20210308_WeWork_Rue_de_Madrid_-_Paris_015.jpg?auto=format%20compress&fit=crop&q=50&w=900&h=506',
     textDescription: 'Art, beauty, and culture abound in Paris, a captivating city unlike any other. The city of lights is a top destination to visit, live in, and—following the introduction of business-friendly policies from the Macron administration—it`s also an ideal location for starting or expanding a company.',
     facilities: ''
   },

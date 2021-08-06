@@ -4,16 +4,6 @@ import instagram from '../../assets/footer/instagramsvg.svg'
 import tweeter from '../../assets/footer/twittersvg.png'
 import linkedin from '../../assets/footer/linkedinsvg.png'
 import { Link } from 'react-router-dom'
-// import facebook from '../../assets/footer/facebook.png'
-// import instagram from '../../assets/footer/instagram.png'
-// import tweeter from '../../assets/footer/tweeter.png'
-// import linkedin from '../../assets/footer/linkedin.png'
-// import { Link } from 'react-router-dom'
-
-
-
-
-
 
 const Footer = () => {
 
@@ -25,7 +15,6 @@ const Footer = () => {
           <div className="me-5 d-none d-lg-block">
             <span>Get connected with us on social networks:</span>
           </div>
-
           <div>
             <a href="" className="me-4 text-reset">
               <img src={facebook} width="36" height="36" fill="currentColor" className="bi bi-facebook" viewBox="0 0 16 16"></img>
@@ -44,8 +33,6 @@ const Footer = () => {
             </a>
           </div>
         </section>
-
-
         <section className="">
           <div className="container text-center text-md-start mt-5">
             <div className="row mt-3">
@@ -57,8 +44,6 @@ const Footer = () => {
                   <a href="/AboutUs" className="text-reset fw-bold">ABOUT US</a>
                 </p>
               </div>
-
-
               <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                 <h6 className="text-uppercase fw-bold mb-4 boldtext">
                   Contact</h6>
@@ -67,7 +52,6 @@ const Footer = () => {
                 <p className="text-reset fw-bold">0044 1774 5678 878</p>
                 <p className="text-reset fw-bold">0044 7574 5678 878</p>
               </div>
-
               <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                 <h6 className="text-uppercase fw-bold mb-4 boldtext">
                   Impact
@@ -83,9 +67,7 @@ const Footer = () => {
           © 2021 Copyright:
           <a className="text-reset fw-bold" href="/AboutUs"> CEST-DevelopmentTeam</a>
         </div>
-
       </footer>
-
     </>
   )
 }

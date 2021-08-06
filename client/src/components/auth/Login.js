@@ -30,19 +30,15 @@ const Login = () => {
       const { data } = await axios.post('api/login', formdata)
       setTokenToLocalStorage(data.token)
       notify()
-      // console.log(formdata.email)
       setTimeout(function(){
         history.push('/')
       }, 2000)
-      // console.log('token', data.token)
-      // console.log('response', response)
     } catch (err) {
       console.log(err)
       notifyError()
       setError(true)
     }
   }
-  // console.log('form data on state', formdata)
 
   const handleFocus = () => {
     setError(false)
@@ -92,7 +88,6 @@ const Login = () => {
           </form>
           <div className="dropdown-divider"></div>
           <a className="dropdown-item" href="/register">New around here? Sign up</a>
-          {/* <a className="dropdown-item" href="#">Forgot password?</a> */}
         </div>
       </div>
     </>

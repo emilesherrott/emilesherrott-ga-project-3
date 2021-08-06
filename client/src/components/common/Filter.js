@@ -4,13 +4,11 @@ import axios from 'axios'
 
 const Filter = () => {
   const [workspaces, setWorkspaces] = useState([])
-  // console.log(workspaces)
 
   useEffect(() => {
     const getData = async () => {
       const { data } = await axios.get('/api/workspaces')
       setWorkspaces(data)
-      // console.log(data)
     }
     getData()
   }, [])
@@ -31,7 +29,6 @@ const Filter = () => {
       uniquecity.push(item.city)
     }
   })
-  // console.log(uniquecity)
 
   const [search, setSearch] = useState('')
   const handleSearch = (event) => {

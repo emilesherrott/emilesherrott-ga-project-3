@@ -36,7 +36,6 @@ const ContactForm = () => {
               <textarea className="form-control" id="FormControlTextarea1" rows="6" placeholder="Contact us via this form" required></textarea>
             </div>
             <div className="d-grid">
-              {/* <button className="btn btn-primary" type="submit" onClick={showAlert}>Submit</button> */}
               <button className="btn btn-primary changingcolor2" id="changingcolor1" type="submit">Submit</button>
             </div>
           </div>
