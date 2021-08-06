@@ -34,7 +34,7 @@ const Nav = () => {
           </ul>
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link to="/contact-us" className="nav-link boldtext">CONTACT US</Link>
+              <Link to="/contactform" className="nav-link boldtext">CONTACT US</Link>
             </li>
             <li className="nav-item">
               <Link to="/workspaces/new" className="nav-link boldtext">REGISTER A WORKSPACE </Link>

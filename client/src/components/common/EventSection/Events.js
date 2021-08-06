@@ -189,7 +189,7 @@ const Events = () => {
                                       </p>
                                     </form>
                                     :
-                                    <Link to="/login"><button typ="button" className="btn btn-warning taras5 changingcolor1 card1">Please login to access comments.</button></Link>
+                                    <Link to="/login"><button type="button" className="btn btn-warning taras5 changingcolor1 card1">Please login to access comments.</button></Link>
                                   }
                                   <div>{item.comments.map(comment => {
                                     return (

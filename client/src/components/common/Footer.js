@@ -81,7 +81,7 @@ const Footer = () => {
         </section>
         <div className="text-center p-4" styles="background-color: rgba(0, 0, 0, 0.05);">
           © 2021 Copyright:
-          <a className="text-reset fw-bold" href="https://mdbootstrap.com/"> CEST-DevelopmentTeam</a>
+          <a className="text-reset fw-bold" href="/AboutUs"> CEST-DevelopmentTeam</a>
         </div>
 
       </footer>
