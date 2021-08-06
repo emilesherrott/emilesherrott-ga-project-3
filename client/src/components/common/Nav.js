@@ -5,9 +5,7 @@ import LogoHome from '../../assets/home_assets/LogoHome2.png'
 
 const Nav = () => {
 
-
   const history = useHistory()
-
   const { pathname } = useLocation()
 
   const handleLogout = () => {
@@ -48,7 +46,6 @@ const Nav = () => {
                 <span onClick={handleLogout} className="nav-link boldtext" id="cursor">LOG OUT</span>
               </li>
             }
-
           </ul>
         </div>
       </div>

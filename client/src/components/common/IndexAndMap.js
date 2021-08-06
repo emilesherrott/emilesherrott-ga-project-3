@@ -1,18 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-
 import FilterIndexAndMap from './FilterIndexAndMap'
 import DisplayIndexAndMap from './DisplayIndexAndMap'
-
-import MapTwo from './MapTwo'
+import Map from './Map'
 
 const IndexAndMap = () => {
   const [myData, setMyData] = useState(null)
   const [hasError, setHasError] = useState(false)
-
   const [filteredData, setFilteredData] = useState(null)
-  // const [finalDisplay, setFinalDisplay] = useState(null)
-
 
   useEffect(() => {
     const getData = async () => {
@@ -42,9 +37,6 @@ const IndexAndMap = () => {
     setFilteredData(filterTextArray)
   }
 
-
-  // setFinalDisplay(filteredData.length ? filteredData : myData)
-
   const styles = {
     row: {
       display: 'flex',
@@ -57,7 +49,6 @@ const IndexAndMap = () => {
       height: '80vh',
     }, colMap: {
       height: '80vh',
-      // paddingLeft: '6.8vw',
     },
   }
 
@@ -72,7 +63,7 @@ const IndexAndMap = () => {
             filteredData={filteredData} />
         </div>
         <div className="col-sm-12 col-md-9" style={styles.colMap}>
-          <MapTwo
+          <Map
             filteredData={filteredData}
             myData={myData} />          
         </div>
