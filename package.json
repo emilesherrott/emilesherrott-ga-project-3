@@ -16,7 +16,7 @@
   "type": "module",
   "scripts": {
     "seed": "node db/seeds.js",
-    "serve": "node index.js",
+    "start": "node index.js",
     "dev": "npx nodemon",
     "build": "cd client && yarn && yarn build"
   },
