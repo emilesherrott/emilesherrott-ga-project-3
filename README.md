@@ -2,8 +2,7 @@
 ## [CEST Workspaces](https://emilesherrott-ga-project-3.herokuapp.com/)
 ### Project Description
 
-Based on a feed of data from the [Weather API](https://www.weatherapi.com/), my team member, Ole Nascimento and I set about building a visually interesting and intuitive web app to  utilise a broad range of data available. <br />
-I was passionate about this project as weather applications are widley understoodchose and used. Fitting my desire to work on projects which could be of use to a wider range of users as possible. 
+A group project MERN application created with RESTful routes. Created with agile working principles, as a team we met each morning for standup to communicate our project priorities, to set targets for accountability and share effective working habits. 
 
 ### Overview
 Project 1 | Brief
