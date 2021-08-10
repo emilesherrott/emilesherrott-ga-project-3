@@ -15,7 +15,7 @@ Team Members | Team Of Four
 ### Setting up on a local machine
 1. Clone to repository onto your local machine by either:
    * Running `git clone git@github.com:emilesherrott/emilesherrott-ga-project-3.git` from your terminal. 
-   * Downloading the emilesherrott-ga-project-.zip file and open in your prefered code editor. 
+   * Downloading the emilesherrott-ga-project-3.zip file and open in your prefered code editor. 
 2. Open up the terminal in your code editor. 
    * From the root folder run `yarn seed`
    * From the client folder run `yarn start` 
