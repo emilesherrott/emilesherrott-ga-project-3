@@ -5,12 +5,12 @@
 A group project MERN application created with RESTful routes. Created with agile working principles, as a team we met each morning for standup to communicate our project priorities, to set targets for accountability and share effective working habits. 
 
 ### Overview
-Project 1 | Brief
+Project 3 | Brief
 -------------|--------------
 Name | CEST Workspaces
 Skills | HTML5, CSS3, Sass, JavaScript, React, Node.js, Express, MongoDB, Mongoose
 Time Frame | 1 Week
-Team Members | Team Of Four
+Participants | Team Of Four
 
 ### Setting up on a local machine
 1. Clone to repository onto your local machine by either:
