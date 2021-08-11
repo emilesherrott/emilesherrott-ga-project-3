@@ -1,5 +1,5 @@
 # emilesherrott-ga-project-3
-## [CEST Workspaces](https://emilesherrott-ga-project-3.herokuapp.com/)
+## Deployed: [CEST Workspaces](https://emilesherrott-ga-project-3.herokuapp.com/)
 ### Project Description
 
 A group project MERN application created with RESTful routes. Created with agile working principles, as a team we met each morning for standup to communicate our project priorities, to set targets for accountability and share effective working habits. 
