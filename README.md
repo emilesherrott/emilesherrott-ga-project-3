@@ -7,10 +7,10 @@ A group project MERN application created with RESTful routes. Created with agile
 ### Overview
 Project 3 | Brief
 -------------|--------------
-Name | CEST Workspaces
-Skills | HTML5, CSS3, Sass, JavaScript, React, Node.js, Express, MongoDB, Mongoose
-Time Frame | 1 Week
 Participants | Team Of Four
+Time Frame | 7 Days
+Skills | HTML5, CSS3, Sass, JavaScript, React, Node.js, Express, MongoDB, Mongoose, Git, GitHub
+Deployment | Heroku
 
 ### Setting up on a local machine
 1. Clone to repository onto your local machine by either:
