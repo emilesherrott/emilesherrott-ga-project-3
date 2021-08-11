@@ -30,3 +30,4 @@ Deployment | Heroku
 ### What was learnt from building emilesherrott-ga-project-3
 
 ### Acknowledgements
+[Cristina Grande](https://github.com/crigrande) | [Sarantis Atonakas](https://github.com/sarandis10) | [Taras Kiricenko](https://github.com/TarasKiricenko)
