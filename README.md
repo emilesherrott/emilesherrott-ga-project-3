@@ -12,7 +12,15 @@ Time Frame | 7 Days
 Skills | HTML5, CSS3, Sass, JavaScript, React, Node.js, Express, MongoDB, Mongoose, Git, GitHub
 Deployment | Heroku
 
-### Setting up on a local machine
+### Table of Contents  
+* [Setting up on a local machine](#anchor-1)
+* [Project Approach](#anchor-2)
+* [Project Challenges](#anchor-3)
+* [Project Bugs](#anchor-4)
+* [Project Learning Outcomes](#anchor-5)
+* [Acknowledgements](#anchor-6)
+
+### Setting up on a local machine <a id="anchor-1"></a>
 1. Clone to repository onto your local machine by either:
    * Running `git clone git@github.com:emilesherrott/emilesherrott-ga-project-3.git` from your terminal. 
    * Downloading the emilesherrott-ga-project-3.zip file and open in your prefered code editor. 
@@ -20,14 +28,13 @@ Deployment | Heroku
    * From the root folder run `yarn seed`
    * From the client folder run `yarn start` 
 
+### Project Approach <a id="anchor-2"></a>
 
-### Project Approach
+### Project Challenges <a id="anchor-3"></a>
 
-### Project Challenges
+### Project Bugs <a id="anchor-4"></a>
 
-### Project Bugs
+### Project Learning Outcomes <a id="anchor-5"></a>
 
-### What was learnt from building emilesherrott-ga-project-3
-
-### Acknowledgements
+### Acknowledgements <a id="anchor-6"></a>
 [Cristina Grande](https://github.com/crigrande) | [Sarantis Atonakas](https://github.com/sarandis10) | [Taras Kiricenko](https://github.com/TarasKiricenko)
