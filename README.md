@@ -12,6 +12,9 @@ Time Frame | 7 Days
 Skills | HTML5, CSS3, Sass, JavaScript, React, Node.js, Express, MongoDB, Mongoose, Git, GitHub
 Deployment | Heroku
 
+### Preview
+![ Alt text](emilesherrott-ga-project-3-gif.gif) [](emilesherrott-ga-project-3-gif.gif)
+
 ### Table of Contents  
 * [Setting up on a local machine](#anchor-1)
 * [Project Approach](#anchor-2)
